@@ -48,7 +48,7 @@ export default function Home() {
           </div>
           <div className="relative">
             <div className="aspect-[4/3] bg-surface-container relative overflow-hidden">
-              <img alt="Detalhe de fabricação industrial" className="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4px1Ox5zcD4gzTiUmMGepfLD2KfZ9dPjUOx2hUwJM2fBPyoIPM3qRAfWxEF_0y4EzKGTPG059H94VR5yYtqmKGO4-nQSR9f2qKf_cVIqtKCJBWdg9u4gIgD4CvLYHbit9OrVFPD-LOtwrGTnpiqpxN_4CTb8DoaB8z8hgUHl24dG1H1MP1wVxbTqDuIEkOvNyjaai5dNwNX1TI0ZTHvygcOYyjN6PdqsBwtOxnPbh4Kz98OzMO2ybtuCUNIRCZw3f15tnqNl3m9m9" />
+              <img alt="Detalhe de fabricação industrial" className="w-full h-full object-cover grayscale" src="/img/torno.png" />
               <div className="absolute inset-0 border-[14px] border-surface/50 pointer-events-none"></div>
             </div>
             <div className="absolute -bottom-8 -right-8 bg-primary p-md hidden md:block">

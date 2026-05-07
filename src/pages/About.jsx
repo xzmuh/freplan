@@ -3,6 +3,10 @@ export default function About() {
     <>
       <main>
         <section className="relative py-xl flex items-center border-b border-graphite bg-surface-container-lowest">
+          <div className="absolute inset-0 z-0">
+            <img alt="Estrutura industrial" className="w-full h-full object-cover opacity-25 grayscale" src="/img/freplanLocal.png" />
+            <div className="absolute inset-0 bg-gradient-to-r from-surface via-surface/75 to-surface/20"></div>
+          </div>
           <div className="relative z-10 px-margin max-w-7xl mx-auto w-full py-lg">
             <div className="border-l-4 border-primary pl-lg">
               <p className="font-label-bold text-label-bold text-primary tracking-widest uppercase mb-sm">Sobre nós</p>
@@ -55,7 +59,7 @@ export default function About() {
                 <p className="font-body-lg text-body-lg text-light-gray">O crescimento da empresa sempre esteve ligado à qualidade das soluções entregues e à confiança construída ao longo dos anos.</p>
               </div>
               <div className="relative aspect-video border border-graphite bg-surface overflow-hidden">
-                <img alt="Ambiente industrial" className="w-full h-full object-cover grayscale opacity-60" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoYPBFg4boWfyJfF97Mc-t7GVA9gvwq2K0PMUhD7bC6KYPMCL5ZHVkBq4kb_3rW2vl3sC9jvM7eHPhVZQjZMaIu0tHr4ir6tncHyUGmg88aAk3paS_gqJTVnqvbIr84qfDN1LPcMyLET_psV0Edw8V-RH0qFa3q5GyjfXNzMWFHjqT9YfUT3w4Abnhf3WpO-ZowPfEhuHMqDgmr7-K3RsTTClBQlmqVSUKoWyEYoafHTdUeAxAJ563-ATxu3ml0VFRPLKgzobK___y" />
+                <img alt="Ambiente industrial" className="w-full h-full object-cover grayscale opacity-60" src="/img/freplanLocal.jpeg" />
                 <div className="absolute bottom-0 right-0 bg-primary p-md">
                   <p className="font-headline-md text-headline-md text-white leading-none">20+</p>
                   <p className="font-label-bold text-label-bold text-white uppercase text-[10px]">anos de experiência</p>
