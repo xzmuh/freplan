@@ -1,25 +1,27 @@
 export default function Home() {
+  const assetBase = import.meta.env.BASE_URL;
+
   return (
     <>
-      <section className="relative h-[calc(100vh-20rem)] flex items-center overflow-hidden">
+      <section className="relative min-h-[calc(100dvh-72px)] md:min-h-[calc(100dvh-88px)] flex items-center overflow-hidden py-[clamp(40px,8dvh,88px)]">
         <div className="absolute inset-0 z-0">
           <img alt="Estrutura industrial" className="w-full h-full object-cover opacity-25 grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdS8igT5JKuY4hS_btBXUW9yBxnKOqfIPBhg0TOeYHq30dMfQZYbGOxinj7A8b9tha4Of8MHpkQuqrCdFXquFMORXEEgYxH0vgLkKk23MTz8ZGAFvsttS78j9BtRo5i3pa-GDh_rnBF44IZu_Z_MTtHxJ6sR9aoskLOL0xXig_XncFIBFEHfHVmOUvVkky_BjEKMViOrCskY8KOdne9oZCFd4HddtWNDqtR1sHx6VsTrVMlJXISuzAZr3PYLok2X42F_qpSXPG-3QL" />
           <div className="absolute inset-0 bg-gradient-to-r from-surface via-surface/75 to-surface/20"></div>
         </div>
-        <div className="relative z-10 px-margin w-full max-w-7xl mx-auto py-xl">
-          <div className="hazard-stripes-primary h-1.5 w-24 mb-md"></div>
-          <h1 className="font-headline-xl text-headline-xl text-secondary uppercase mb-md max-w-5xl">
+        <div className="relative z-10 px-margin w-full max-w-7xl mx-auto">
+          <div className="hazard-stripes-primary h-1.5 w-20 md:w-24 mb-sm md:mb-md"></div>
+          <h1 className="font-headline-xl text-[32px] sm:text-[42px] md:text-headline-xl leading-[1.04] text-secondary uppercase mb-md max-w-[58rem]">
             Soluções sob medida para operações que <span className="text-primary">não podem parar</span>.
           </h1>
 
-          <p className="font-body-lg text-body-lg text-on-surface-variant mb-xl max-w-2xl border-l border-primary pl-lg">
+          <p className="font-body-lg text-body-lg text-on-surface-variant mb-lg md:mb-xl max-w-2xl border-l border-primary pl-md md:pl-lg">
             Tornearia, usinagem e fabricação de componentes com precisão, qualidade e foco na necessidade real de cada aplicação.
           </p>
-          <div className="flex flex-col sm:flex-row gap-sm">
-            <button onClick={() => window.open('/products', '_blank')} className="bg-primary text-secondary font-label-bold text-label-bold uppercase px-md py-sm text-md hover:bg-white hover:text-black transition-all">
+          <div className="grid grid-cols-1 sm:flex sm:flex-row gap-sm max-w-xl">
+            <button onClick={() => window.open(`${assetBase}products`, '_blank')} className="w-full sm:w-auto min-h-12 bg-primary text-secondary font-label-bold text-label-bold uppercase px-md py-sm text-md hover:bg-white hover:text-black transition-all">
               Conheça nossas soluções
             </button>
-            <button onClick={() => window.open('https://wa.me/5514998701514', '_blank')} className="border-2 border-primary text-primary font-label-bold text-label-bold uppercase px-md py-md text-md hover:bg-primary hover:text-white transition-all">
+            <button onClick={() => window.open('https://wa.me/5514998701514', '_blank')} className="w-full sm:w-auto min-h-12 border-2 border-primary text-primary font-label-bold text-label-bold uppercase px-md py-sm text-md hover:bg-primary hover:text-white transition-all">
               Falar com a Freplan
             </button>
           </div>
@@ -48,7 +50,7 @@ export default function Home() {
           </div>
           <div className="relative">
             <div className="aspect-[4/3] bg-surface-container relative overflow-hidden">
-              <img alt="Detalhe de fabricação industrial" className="w-full h-full object-cover grayscale" src="/img/torno.png" />
+              <img alt="Detalhe de fabricação industrial" className="w-full h-full object-cover grayscale" src={`${assetBase}img/torno.png`} />
               <div className="absolute inset-0 border-[14px] border-surface/50 pointer-events-none"></div>
             </div>
             <div className="absolute -bottom-8 -right-8 bg-primary p-md hidden md:block">

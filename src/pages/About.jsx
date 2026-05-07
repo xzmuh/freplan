@@ -1,10 +1,12 @@
 export default function About() {
+  const assetBase = import.meta.env.BASE_URL;
+
   return (
     <>
       <main>
         <section className="relative py-xl flex items-center border-b border-graphite bg-surface-container-lowest">
           <div className="absolute inset-0 z-0">
-            <img alt="Estrutura industrial" className="w-full h-full object-cover opacity-25 grayscale" src="/img/freplanLocal.png" />
+            <img alt="Estrutura industrial" className="w-full h-full object-cover opacity-25 grayscale" src={`${assetBase}img/freplanLocal.jpeg`} />
             <div className="absolute inset-0 bg-gradient-to-r from-surface via-surface/75 to-surface/20"></div>
           </div>
           <div className="relative z-10 px-margin max-w-7xl mx-auto w-full py-lg">
@@ -59,7 +61,7 @@ export default function About() {
                 <p className="font-body-lg text-body-lg text-light-gray">O crescimento da empresa sempre esteve ligado à qualidade das soluções entregues e à confiança construída ao longo dos anos.</p>
               </div>
               <div className="relative aspect-video border border-graphite bg-surface overflow-hidden">
-                <img alt="Ambiente industrial" className="w-full h-full object-cover grayscale opacity-60" src="/img/freplanLocal.jpeg" />
+                <img alt="Ambiente industrial" className="w-full h-full object-cover grayscale opacity-60" src={`${assetBase}img/freplanLocal.jpeg`} />
                 <div className="absolute bottom-0 right-0 bg-primary p-md">
                   <p className="font-headline-md text-headline-md text-white leading-none">20+</p>
                   <p className="font-label-bold text-label-bold text-white uppercase text-[10px]">anos de experiência</p>

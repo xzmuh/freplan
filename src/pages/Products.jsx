@@ -1,5 +1,5 @@
 export default function Products() {
-  const productsHeroImage = "/img/products-hero-image.png";
+  const productsHeroImage = `${import.meta.env.BASE_URL}img/products-hero-image.png`;
 
   return (
     <>
