@@ -1,16 +1,26 @@
-# React + Vite
+# Freplan Industry
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Site institucional desenvolvido para a Freplan, empresa especializada em usinagem, tornearia e fabricação de soluções industriais sob medida.
 
-Currently, two official plugins are available:
+O projeto apresenta a empresa, seus serviços, áreas de atuação, processo de trabalho, catálogo de soluções e canais de contato.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Tecnologias utilizadas
 
-## React Compiler
+- React
+- Vite
+- JavaScript
+- Tailwind CSS
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Objetivo
 
-## Expanding the ESLint configuration
+Criar uma presença digital profissional para a Freplan, destacando sua atuação na fabricação de peças, componentes e soluções mecânicas para demandas industriais reais.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Funcionalidades
+
+- Página inicial institucional
+- Seção sobre a empresa
+- Apresentação de serviços
+- Catálogo de soluções industriais
+- Fluxo de trabalho em etapas
+- Integração com WhatsApp
+- Layout responsivo
