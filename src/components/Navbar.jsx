@@ -31,6 +31,7 @@ export default function Navbar() {
           <Link to="/" className={getLinkClass('/')}>Home</Link>
           <Link to="/about" className={getLinkClass('/about')}>Sobre nós</Link>
           <Link to="/products" className={getLinkClass('/products')}>Soluções</Link>
+          <Link to="/contact" className={getLinkClass('/contact')}>Contato</Link>
         </div>
 
         <button onClick={() => window.open('https://wa.me/5514998701514', '_blank')} className="hidden md:inline-flex bg-primary-container text-on-primary-container font-label-bold text-label-bold uppercase px-lg py-sm hover:bg-white hover:text-black transition-all duration-150 active:scale-95 border-b-4 border-primary">
@@ -57,6 +58,7 @@ export default function Navbar() {
           <Link to="/" onClick={() => setIsMenuOpen(false)} className={mobileLinkClass('/')}>Home</Link>
           <Link to="/about" onClick={() => setIsMenuOpen(false)} className={mobileLinkClass('/about')}>Sobre nós</Link>
           <Link to="/products" onClick={() => setIsMenuOpen(false)} className={mobileLinkClass('/products')}>Soluções</Link>
+          <Link to="/contact" onClick={() => setIsMenuOpen(false)} className={mobileLinkClass('/contact')}>Contato</Link>
           <button
             onClick={() => window.open('https://wa.me/5514998701514', '_blank')}
             className="mt-sm w-full bg-primary-container text-on-primary-container font-label-bold text-label-bold uppercase px-md py-sm transition-all active:scale-[0.98] border-b-4 border-primary"

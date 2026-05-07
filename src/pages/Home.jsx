@@ -10,7 +10,7 @@ export default function Home() {
         </div>
         <div className="relative z-10 px-margin w-full max-w-7xl mx-auto">
           <div className="hazard-stripes-primary h-1.5 w-20 md:w-24 mb-sm md:mb-md"></div>
-          <h1 className="font-headline-xl text-[32px] sm:text-[42px] md:text-headline-xl leading-[1.04] text-secondary uppercase mb-md max-w-[58rem]">
+          <h1 className="font-headline-xl text-headline-xl text-secondary uppercase mb-md max-w-5xl">
             Soluções sob medida para operações que <span className="text-primary">não podem parar</span>.
           </h1>
 
@@ -18,7 +18,7 @@ export default function Home() {
             Tornearia, usinagem e fabricação de componentes com precisão, qualidade e foco na necessidade real de cada aplicação.
           </p>
           <div className="grid grid-cols-1 sm:flex sm:flex-row gap-sm max-w-xl">
-            <button onClick={() => window.open(`${assetBase}products`, '_blank')} className="w-full sm:w-auto min-h-12 bg-primary text-secondary font-label-bold text-label-bold uppercase px-md py-sm text-md hover:bg-white hover:text-black transition-all">
+            <button onClick={() => window.open(`${assetBase}#/products`, '_blank')} className="w-full sm:w-auto min-h-12 bg-primary text-secondary font-label-bold text-label-bold uppercase px-md py-sm text-md hover:bg-white hover:text-black transition-all">
               Conheça nossas soluções
             </button>
             <button onClick={() => window.open('https://wa.me/5514998701514', '_blank')} className="w-full sm:w-auto min-h-12 border-2 border-primary text-primary font-label-bold text-label-bold uppercase px-md py-sm text-md hover:bg-primary hover:text-white transition-all">

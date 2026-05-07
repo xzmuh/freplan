@@ -1,10 +1,11 @@
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
+import { HashRouter, Routes, Route, useLocation } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import ScrollManager from './components/ScrollManager'
 import Home from './pages/Home'
 import Products from './pages/Products'
 import About from './pages/About'
+import Contact from './pages/Contact'
 
 function AppContent() {
   const location = useLocation();
@@ -18,6 +19,7 @@ function AppContent() {
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<Products />} />
           <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>
       <Footer />
@@ -26,12 +28,10 @@ function AppContent() {
 }
 
 function App() {
-  const basename = import.meta.env.BASE_URL === '/' ? undefined : import.meta.env.BASE_URL;
-
   return (
-    <BrowserRouter basename={basename}>
+    <HashRouter>
       <AppContent />
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 

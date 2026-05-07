@@ -14,6 +14,7 @@ export default function Footer() {
         <Link to="/" className="text-light-gray hover:text-secondary font-label-bold text-label-bold uppercase transition-colors">Home</Link>
         <Link to="/products" className="text-light-gray hover:text-secondary font-label-bold text-label-bold uppercase transition-colors">Soluções</Link>
         <Link to="/about" className="text-light-gray hover:text-secondary font-label-bold text-label-bold uppercase transition-colors">Sobre nós</Link>
+        <Link to="/contact" className="text-light-gray hover:text-secondary font-label-bold text-label-bold uppercase transition-colors">Contato</Link>
       </div>
     </footer>
   );
