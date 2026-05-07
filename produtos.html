@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&amp;family=Space+Grotesk:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-background": "#e3e2e2",
+                        "inverse-surface": "#e3e2e2",
+                        "primary-fixed-dim": "#ffb4a3",
+                        "surface-tint": "#ffb4a3",
+                        "primary-fixed": "#ffdad2",
+                        "on-secondary-fixed": "#201c00",
+                        "secondary-fixed-dim": "#dbc900",
+                        "on-tertiary": "#303030",
+                        "on-error-container": "#ffdad6",
+                        "on-surface": "#e3e2e2",
+                        "tertiary-fixed-dim": "#c8c6c6",
+                        "surface-dim": "#121414",
+                        "surface-container-high": "#292a2a",
+                        "inverse-on-surface": "#2f3131",
+                        "surface-container": "#1e2020",
+                        "primary": "#ffb4a3",
+                        "outline-variant": "#5e3f38",
+                        "on-secondary": "#363100",
+                        "surface-container-highest": "#333535",
+                        "on-tertiary-fixed": "#1b1c1c",
+                        "error": "#ffb4ab",
+                        "tertiary-fixed": "#e4e2e2",
+                        "inverse-primary": "#b62400",
+                        "surface-container-lowest": "#0d0e0f",
+                        "on-primary-fixed": "#3d0600",
+                        "on-tertiary-container": "#292a2a",
+                        "primary-container": "#ff5631",
+                        "on-secondary-fixed-variant": "#4f4800",
+                        "secondary-container": "#fae500",
+                        "on-error": "#690005",
+                        "tertiary-fixed": "#e4e2e2",
+                        "inverse-primary": "#b62400",
+                        "surface-container-lowest": "#0d0e0f",
+                        "on-primary-fixed": "#3d0600",
+                        "on-tertiary-container": "#292a2a",
+                        "primary-container": "#ff5631",
+                        "on-secondary-fixed-variant": "#4f4800",
+                        "secondary-container": "#fae500",
+                        "on-error": "#690005",
+                        "tertiary-container": "#919090",
+                        "on-surface-variant": "#e8bdb3",
+                        "background": "#121414",
+                        "secondary-fixed": "#fae500",
+                        "on-primary": "#630f00",
+                        "tertiary": "#c8c6c6",
+                        "on-secondary-container": "#6f6500",
+                        "secondary": "#ffffff",
+                        "surface-bright": "#38393a",
+                        "surface-variant": "#333535",
+                        "outline": "#af887f",
+                        "error-container": "#93000a",
+                        "surface-container-low": "#1a1c1c",
+                        "on-primary-fixed-variant": "#8b1900",
+                        "surface": "#121414",
+                        "on-tertiary-fixed-variant": "#474747",
+                        "on-primary-container": "#570c00"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "xs": "4px",
+                        "gutter": "24px",
+                        "sm": "12px",
+                        "margin": "40px",
+                        "xl": "80px",
+                        "lg": "48px",
+                        "md": "24px",
+                        "base": "8px"
+                    },
+                    "fontFamily": {
+                        "label-bold": ["Space Grotesk"],
+                        "headline-xl": ["Space Grotesk"],
+                        "body-md": ["Inter"],
+                        "mono-data": ["Space Grotesk"],
+                        "headline-md": ["Space Grotesk"],
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Space Grotesk"]
+                    },
+                    "fontSize": {
+                        "label-bold": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                        "headline-xl": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "mono-data": ["14px", {"lineHeight": "1.0", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-lg": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .hazard-stripes {
+            background: repeating-linear-gradient(
+                45deg,
+                #C9C9C9,
+                #C9C9C9 10px,
+                #1e2020 10px,
+                #1e2020 20px
+            );
+        }
+        .industrial-grid {
+            background-image: linear-gradient(#1a1c1c 1px, transparent 1px), linear-gradient(90deg, #1a1c1c 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background industrial-grid">
+<!-- TopNavBar -->
+<nav class="bg-surface dark:bg-surface docked full-width top-0 z-50 border-b-4 border-surface-container-highest flex justify-between items-center w-full px-margin py-md mx-auto sticky">
+<div class="font-headline-lg text-headline-lg font-bold text-secondary dark:text-secondary tracking-tighter">
+            FREPLAN
+        </div>
+<div class="hidden md:flex gap-lg">
+<a class="text-secondary dark:text-secondary hover:text-primary transition-colors font-headline-md text-headline-md uppercase tracking-tight" href="#">SERVICES</a>
+<a class="text-primary border-b-4 border-primary pb-2 font-headline-md text-headline-md uppercase tracking-tight" href="#">PROJECTS</a>
+<a class="text-secondary dark:text-secondary hover:text-primary transition-colors font-headline-md text-headline-md uppercase tracking-tight" href="#">CAPABILITIES</a>
+<a class="text-secondary dark:text-secondary hover:text-primary transition-colors font-headline-md text-headline-md uppercase tracking-tight" href="#">ABOUT</a>
+</div>
+<button class="bg-primary-container text-on-primary-container font-label-bold text-label-bold uppercase px-lg py-sm hover:bg-surface-container-high transition-all duration-150 active:scale-95 border-b-4 border-primary">
+            REQUEST QUOTE
+        </button>
+</nav>
+<!-- Hero Section -->
+<header class="relative w-full min-h-[60vh] flex flex-col items-center justify-center text-center px-margin py-xl border-b-2 border-surface-variant overflow-hidden">
+<div class="relative z-10 max-w-5xl">
+<div class="inline-block hazard-stripes h-4 w-full mb-md"></div>
+<h1 class="font-headline-xl text-headline-xl text-secondary mb-md uppercase">SOLUÇÕES INDUSTRIAIS DE ALTA PERFORMANCE</h1>
+<p class="font-body-lg text-body-lg text-tertiary max-w-2xl mx-auto uppercase tracking-wider">
+                Engenharia de precisão para infraestrutura pesada. Explore nossa linha de equipamentos desenvolvidos para máxima durabilidade e eficiência em ambientes críticos.
+            </p>
+<div class="mt-lg"><button class="bg-[#FF3600] text-white font-headline-md text-headline-md uppercase px-xl py-md hover:bg-black hover:text-[#FF3600] border-2 border-[#FF3600] transition-all active:scale-95">EXPLORAR CATÁLOGO COMPLETO</button></div></div>
+</header>
+<!-- Product Showcase -->
+<section class="px-margin py-xl max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Card 1 -->
+<div class="bg-surface-container border-2 border-surface-variant flex flex-col">
+<div class="h-4 bg-primary-container"></div>
+<div class="p-md flex flex-col flex-grow">
+<img alt="" class="w-full h-48 object-cover mb-md grayscale hover:grayscale-0 transition-all border border-outline-variant" data-alt="Close-up shot of heavy industrial machinery components including large gear systems and hydraulic pistons. The metal surfaces are clean but have a brushed steel texture with sharp highlights from high-contrast studio lighting. The color palette is dominated by deep blacks, grays, and a single vibrant orange accent on a safety label." src="https://lh3.googleusercontent.com/aida/ADBb0uiHSMS8IdAYNlNH4Csi8AE1dK1E2bQflO7a04JcflhBBSGDhbaUaQhQRyuDETDgFKozc-9UJJ5o0wF0toMDEdQJD2gul145Wn2rDPUchCU7xmB5ifYhuPVScMWIFnhFGdU0lnfNs931vJY-09TirDV5kLCH3rc9qiDFCQxKykODEIKjMNfLo12SS6CJOWQlV2DpDGEbfkteXS7uLnvHRTRE_T_32cmj2DFRVdnFNwNJ4ZESzE4apoyzHEO3Da5DuNnzT9I6YyUoVQ"/>
+<span class="font-label-bold text-label-bold text-primary uppercase mb-xs">Unit 01</span>
+<h3 class="font-headline-md text-headline-md text-secondary uppercase mb-sm">Heavy Machinery</h3>
+<p class="font-body-md text-body-md text-tertiary-fixed-dim mb-md flex-grow">Equipamentos de grande porte para movimentação de terra e construção civil pesada.</p>
+<a class="font-label-bold text-label-bold text-primary uppercase flex items-center gap-xs hover:underline decoration-2 underline-offset-4" href="#">
+                        Ver Detalhes <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container border-2 border-surface-variant flex flex-col">
+<div class="h-4 bg-secondary-container"></div>
+<div class="p-md flex flex-col flex-grow">
+<div class="w-full h-48 bg-surface-container-highest mb-md border border-outline-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-headline-xl text-primary">precision_manufacturing</span>
+</div>
+<span class="font-label-bold text-label-bold text-primary uppercase mb-xs">Unit 02</span>
+<h3 class="font-headline-md text-headline-md text-secondary uppercase mb-sm">Precision Tools</h3>
+<p class="font-body-md text-body-md text-tertiary-fixed-dim mb-md flex-grow">Instrumentação de alta fidelidade para medição e calibração em escala micrométrica.</p>
+<a class="font-label-bold text-label-bold text-primary uppercase flex items-center gap-xs hover:underline decoration-2 underline-offset-4" href="#">
+                        Ver Detalhes <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container border-2 border-surface-variant flex flex-col">
+<div class="h-4 bg-primary-container"></div>
+<div class="p-md flex flex-col flex-grow">
+<div class="w-full h-48 bg-surface-container-highest mb-md border border-outline-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-headline-xl text-primary">security</span>
+</div>
+<span class="font-label-bold text-label-bold text-primary uppercase mb-xs">Unit 03</span>
+<h3 class="font-headline-md text-headline-md text-secondary uppercase mb-sm">Safety Equipment</h3>
+<p class="font-body-md text-body-md text-tertiary-fixed-dim mb-md flex-grow">Sistemas de proteção individual e coletiva com certificação de segurança internacional.</p>
+<a class="font-label-bold text-label-bold text-primary uppercase flex items-center gap-xs hover:underline decoration-2 underline-offset-4" href="#">
+                        Ver Detalhes <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-container border-2 border-surface-variant flex flex-col">
+<div class="h-4 bg-secondary-container"></div>
+<div class="p-md flex flex-col flex-grow">
+<div class="w-full h-48 bg-surface-container-highest mb-md border border-outline-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-headline-xl text-primary">architecture</span>
+</div>
+<span class="font-label-bold text-label-bold text-primary uppercase mb-xs">Unit 04</span>
+<h3 class="font-headline-md text-headline-md text-secondary uppercase mb-sm">Modular Structures</h3>
+<p class="font-body-md text-body-md text-tertiary-fixed-dim mb-md flex-grow">Arquitetura modular de rápida montagem para expansão industrial imediata.</p>
+<a class="font-label-bold text-label-bold text-primary uppercase flex items-center gap-xs hover:underline decoration-2 underline-offset-4" href="#">
+                        Ver Detalhes <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="bg-surface-container border-2 border-surface-variant flex flex-col">
+<div class="h-4 bg-primary-container"></div>
+<div class="p-md flex flex-col flex-grow">
+<div class="w-full h-48 bg-surface-container-highest mb-md border border-outline-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-headline-xl text-primary">conveyor_belt</span>
+</div>
+<span class="font-label-bold text-label-bold text-primary uppercase mb-xs">Unit 05</span>
+<h3 class="font-headline-md text-headline-md text-secondary uppercase mb-sm">Logistics Systems</h3>
+<p class="font-body-md text-body-md text-tertiary-fixed-dim mb-md flex-grow">Automação de fluxo de materiais e gestão inteligente de armazéns industriais.</p>
+<a class="font-label-bold text-label-bold text-primary uppercase flex items-center gap-xs hover:underline decoration-2 underline-offset-4" href="#">
+                        Ver Detalhes <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Card 6 -->
+<div class="bg-surface-container border-2 border-surface-variant flex flex-col">
+<div class="h-4 bg-secondary-container"></div>
+<div class="p-md flex flex-col flex-grow">
+<div class="w-full h-48 bg-surface-container-highest mb-md border border-outline-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-headline-xl text-primary">smart_toy</span>
+</div>
+<span class="font-label-bold text-label-bold text-primary uppercase mb-xs">Unit 06</span>
+<h3 class="font-headline-md text-headline-md text-secondary uppercase mb-sm">Automation Units</h3>
+<p class="font-body-md text-body-md text-tertiary-fixed-dim mb-md flex-grow">Robótica avançada e sistemas de controle integrados para indústria 4.0.</p>
+<a class="font-label-bold text-label-bold text-primary uppercase flex items-center gap-xs hover:underline decoration-2 underline-offset-4" href="#">
+                        Ver Detalhes <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section: Ready to Build -->
+<section class="bg-surface-container-lowest border-t-4 border-surface-container-highest px-margin py-xl w-full">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-lg border-2 border-surface-variant p-lg relative overflow-hidden">
+<div class="absolute top-0 left-0 hazard-stripes w-2 h-full"></div>
+<div class="flex-1">
+<h2 class="font-headline-lg text-headline-lg text-secondary uppercase mb-sm">PROJETANDO O FUTURO INDUSTRIAL</h2>
+<p class="font-body-lg text-body-lg text-tertiary uppercase tracking-wide">Inicie sua próxima fase produtiva com a robustez tecnológica da Freplan. Nossa equipe técnica está pronta para dimensionar sua operação.</p>
+</div>
+<div class="flex flex-col gap-sm shrink-0">
+<button class="bg-primary-container text-on-primary-container font-label-bold text-label-bold uppercase px-xl py-sm hover:invert transition-all">
+                    FALAR COM UM ESPECIALISTA
+                </button>
+<button class="bg-transparent text-secondary font-label-bold text-label-bold uppercase px-xl py-sm border-2 border-outline-variant hover:bg-surface-variant transition-all">
+                    BAIXAR PORTFÓLIO PDF
+                </button>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-lowest w-full bottom-0 border-t-4 border-surface-container-highest flex flex-col md:flex-row justify-between items-center w-full px-margin py-lg gap-md">
+<div class="text-headline-md font-headline-md text-primary uppercase">
+            FREPLAN
+        </div>
+<div class="font-label-bold text-label-bold uppercase text-secondary dark:text-secondary text-center md:text-left">
+            © 2024 FREPLAN INDUSTRIAL SOLUTIONS. ALL RIGHTS RESERVED.
+        </div>
+<div class="flex flex-wrap justify-center gap-md">
+<a class="text-secondary-fixed-dim hover:text-secondary hover:underline decoration-2 underline-offset-4 font-label-bold text-label-bold uppercase transition-colors" href="#">PRIVACY POLICY</a>
+<a class="text-secondary-fixed-dim hover:text-secondary hover:underline decoration-2 underline-offset-4 font-label-bold text-label-bold uppercase transition-colors" href="#">TERMS OF SERVICE</a>
+<a class="text-secondary-fixed-dim hover:text-secondary hover:underline decoration-2 underline-offset-4 font-label-bold text-label-bold uppercase transition-colors" href="#">COMPLIANCE</a>
+<a class="text-secondary-fixed-dim hover:text-secondary hover:underline decoration-2 underline-offset-4 font-label-bold text-label-bold uppercase transition-colors" href="#">CONTACT</a>
+</div>
+</footer>
+</body></html>

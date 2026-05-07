@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-fixed-dim": "#ffb4a3",
+                    "surface-container-high": "#292a2a",
+                    "surface-dim": "#121414",
+                    "on-background": "#e3e2e2",
+                    "error": "#ffb4ab",
+                    "outline": "#4D4D4D", // Graphite
+                    "on-tertiary-fixed-variant": "#474747",
+                    "secondary-fixed": "#fae500",
+                    "on-surface-variant": "#C9C9C9", // Light Gray
+                    "on-secondary-fixed": "#201c00",
+                    "surface-container-low": "#1a1c1c",
+                    "tertiary-fixed": "#e4e2e2",
+                    "outline-variant": "#4D4D4D", // Graphite
+                    "tertiary": "#C9C9C9", // Light Gray
+                    "secondary-container": "#fae500",
+                    "on-error": "#690005",
+                    "on-primary-fixed": "#3d0600",
+                    "on-error-container": "#ffdad6",
+                    "surface-variant": "#333535",
+                    "surface-bright": "#38393a",
+                    "secondary-fixed-dim": "#dbc900",
+                    "secondary": "#ffffff",
+                    "on-surface": "#e3e2e2",
+                    "inverse-surface": "#e3e2e2",
+                    "surface-tint": "#FF3600",
+                    "tertiary-fixed-dim": "#C9C9C9",
+                    "surface-container-lowest": "#0d0e0f",
+                    "primary-container": "#FF3600", // Maintain orange
+                    "primary": "#FF3600", // Maintain orange
+                    "primary-fixed": "#ffdad2",
+                    "on-tertiary-container": "#292a2a",
+                    "inverse-on-surface": "#2f3131",
+                    "on-secondary": "#363100",
+                    "on-primary-fixed-variant": "#8b1900",
+                    "background": "#121414",
+                    "on-primary": "#ffffff",
+                    "surface-container": "#1e2020",
+                    "on-primary-container": "#ffffff",
+                    "tertiary-container": "#4D4D4D", // Graphite
+                    "on-secondary-fixed-variant": "#4f4800",
+                    "on-secondary-container": "#6f6500",
+                    "error-container": "#93000a",
+                    "on-tertiary-fixed": "#1b1c1c",
+                    "inverse-primary": "#FF3600",
+                    "surface-container-highest": "#4D4D4D", // Graphite
+                    "surface": "#121414",
+                    "on-tertiary": "#C9C9C9", // Light Gray accent
+                    "graphite": "#4D4D4D",
+                    "light-gray": "#C9C9C9"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0px",
+                    "lg": "0px",
+                    "xl": "0px",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "xs": "4px",
+                    "xl": "80px",
+                    "margin": "40px",
+                    "sm": "12px",
+                    "base": "8px",
+                    "md": "24px",
+                    "lg": "48px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "mono-data": ["Space Grotesk"],
+                    "label-bold": ["Space Grotesk"],
+                    "headline-lg": ["Space Grotesk"],
+                    "headline-xl": ["Space Grotesk"],
+                    "body-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "headline-md": ["Space Grotesk"]
+            },
+            "fontSize": {
+                    "mono-data": ["14px", {"lineHeight": "1.0", "fontWeight": "400"}],
+                    "label-bold": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                    "headline-lg": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "headline-xl": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .hazard-stripes {
+            background: repeating-linear-gradient(
+                45deg,
+                #FF3600,
+                #FF3600 10px,
+                #000000 10px,
+                #000000 20px
+            );
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="bg-background border-b border-graphite docked full-width top-0 z-50 fixed w-full">
+<div class="flex justify-between items-center w-full px-margin py-md mx-auto max-w-7xl">
+<span class="font-headline-lg text-headline-lg font-bold text-secondary tracking-tighter">FREPLAN</span>
+<div class="hidden md:flex gap-lg">
+<a class="font-label-bold text-label-bold uppercase tracking-tight text-light-gray hover:text-primary transition-colors" href="#">SERVICES</a>
+<a class="font-label-bold text-label-bold uppercase tracking-tight text-light-gray hover:text-primary transition-colors" href="#">PROJECTS</a>
+<a class="font-label-bold text-label-bold uppercase tracking-tight text-light-gray hover:text-primary transition-colors" href="#">CAPABILITIES</a>
+<a class="font-label-bold text-label-bold uppercase tracking-tight text-primary border-b-2 border-primary pb-1" href="#">ABOUT</a>
+</div>
+<button class="bg-primary text-white font-label-bold text-label-bold uppercase px-md py-sm hover:bg-transparent hover:text-primary border-2 border-primary transition-all">
+                REQUEST QUOTE
+            </button>
+</div>
+</nav>
+<main class="pt-[80px]">
+<!-- Hero Section - Simplified (No Image) -->
+<section class="relative py-xl flex items-center border-b border-graphite bg-surface-container-lowest">
+<div class="relative z-10 px-margin max-w-7xl mx-auto w-full py-lg">
+<div class="border-l-4 border-primary pl-lg">
+<p class="font-label-bold text-label-bold text-primary tracking-widest uppercase mb-sm">Industrial Leadership</p>
+<h1 class="font-headline-xl text-headline-xl uppercase max-w-4xl leading-tight">Engineering Excellence Since 1994</h1>
+<div class="mt-lg flex gap-md items-center">
+<div class="bg-graphite w-16 h-1"></div>
+<p class="font-body-lg text-body-lg max-w-xl text-light-gray">Building the structural backbone of modern industry with uncompromising precision and technical mastery for over three decades.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Mission & Vision -->
+<section class="py-xl px-margin max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="border border-graphite p-lg bg-transparent hover:bg-surface-container-low transition-colors group">
+<span class="material-symbols-outlined text-primary text-4xl mb-md">precision_manufacturing</span>
+<h3 class="font-headline-md text-headline-md uppercase mb-sm text-white">Precision</h3>
+<p class="font-body-md text-body-md text-light-gray">Our engineering protocols demand sub-millimeter accuracy in every fabrication and deployment process we oversee.</p>
+</div>
+<div class="border border-graphite p-lg bg-transparent hover:bg-surface-container-low transition-colors group">
+<span class="material-symbols-outlined text-primary text-4xl mb-md">health_and_safety</span>
+<h3 class="font-headline-md text-headline-md uppercase mb-sm text-white">Safety</h3>
+<p class="font-body-md text-body-md text-light-gray">Zero-incident culture integrated into our structural DNA. Safety isn't a metric; it's our absolute operational baseline.</p>
+</div>
+<div class="border border-graphite p-lg bg-transparent hover:bg-surface-container-low transition-colors group">
+<span class="material-symbols-outlined text-primary text-4xl mb-md">lightbulb</span>
+<h3 class="font-headline-md text-headline-md uppercase mb-sm text-white">Innovation</h3>
+<p class="font-body-md text-body-md text-light-gray">Leveraging advanced material science and digital twin technology to redefine industrial infrastructure possibilities.</p>
+</div>
+</div>
+</section>
+<!-- Our Story / Timeline -->
+<section class="bg-surface-container-lowest py-xl border-y border-graphite">
+<div class="px-margin max-w-7xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-xl items-center">
+<div>
+<h2 class="font-headline-xl text-headline-lg uppercase mb-lg">The Legacy of <span class="text-primary">FREPLAN</span></h2>
+<div class="space-y-lg border-l-2 border-graphite pl-md">
+<div class="relative">
+<div class="absolute -left-[17px] top-0 w-2 h-2 bg-primary"></div>
+<h4 class="font-label-bold text-label-bold text-primary uppercase">1994 • FOUNDATION</h4>
+<p class="font-body-md text-body-md mt-sm text-light-gray">FREPLAN Industrial Solutions established as a specialized structural consulting firm for high-output manufacturing plants.</p>
+</div>
+<div class="relative">
+<div class="absolute -left-[17px] top-0 w-2 h-2 bg-graphite"></div>
+<h4 class="font-label-bold text-label-bold text-white uppercase">2008 • GLOBAL EXPANSION</h4>
+<p class="font-body-md text-body-md mt-sm text-light-gray">Scale-up to international project management, delivering complex infrastructure across EMEA and APAC regions.</p>
+</div>
+<div class="relative">
+<div class="absolute -left-[17px] top-0 w-2 h-2 bg-graphite"></div>
+<h4 class="font-label-bold text-label-bold text-white uppercase">2024 • THE NEXT FRONTIER</h4>
+<p class="font-body-md text-body-md mt-sm text-light-gray">Pioneering sustainable heavy-industry frameworks and autonomous project monitoring systems.</p>
+</div>
+</div>
+</div>
+<div class="relative aspect-video border border-graphite bg-surface overflow-hidden">
+<img class="w-full h-full object-cover grayscale opacity-60" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoYPBFg4boWfyJfF97Mc-t7GVA9gvwq2K0PMUhD7bC6KYPMCL5ZHVkBq4kb_3rW2vl3sC9jvM7eHPhVZQjZMaIu0tHr4ir6tncHyUGmg88aAk3paS_gqJTVnqvbIr84qfDN1LPcMyLET_psV0Edw8V-RH0qFa3q5GyjfXNzMWFHjqT9YfUT3w4Abnhf3WpO-ZowPfEhuHMqDgmr7-K3RsTTClBQlmqVSUKoWyEYoafHTdUeAxAJ563-ATxu3ml0VFRPLKgzobK___y"/>
+<div class="absolute bottom-0 right-0 bg-primary p-md">
+<p class="font-headline-md text-headline-md text-white leading-none">30+</p>
+<p class="font-label-bold text-label-bold text-white uppercase text-[10px]">Years of Rigor</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Values Section -->
+<section class="py-xl px-margin max-w-7xl mx-auto">
+<div class="text-center mb-xl">
+<h2 class="font-headline-lg text-headline-lg uppercase text-white">Core Principles</h2>
+<div class="w-16 h-1 bg-primary mx-auto mt-sm"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter text-center">
+<div class="p-md">
+<span class="material-symbols-outlined text-5xl text-light-gray mb-md">verified</span>
+<h4 class="font-headline-md text-headline-md uppercase mb-sm text-white">Integrity</h4>
+<p class="font-body-md text-body-md text-light-gray">Honest engineering. We deliver what we promise, without technical compromise or hidden margins.</p>
+</div>
+<div class="p-md">
+<span class="material-symbols-outlined text-5xl text-light-gray mb-md">high_quality</span>
+<h4 class="font-headline-md text-headline-md uppercase mb-sm text-white">Quality</h4>
+<p class="font-body-md text-body-md text-light-gray">Industrial grade is our standard. Every weld, bolt, and calculation is triple-verified for endurance.</p>
+</div>
+<div class="p-md">
+<span class="material-symbols-outlined text-5xl text-light-gray mb-md">eco</span>
+<h4 class="font-headline-md text-headline-md uppercase mb-sm text-white">Sustainability</h4>
+<p class="font-body-md text-body-md text-light-gray">Minimizing footprint through efficient material usage and long-lifecycle structural designs.</p>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="bg-primary py-xl relative overflow-hidden">
+<div class="absolute inset-0 hazard-stripes opacity-5 pointer-events-none"></div>
+<div class="px-margin max-w-7xl mx-auto text-center relative z-10">
+<h2 class="font-headline-xl text-headline-xl text-white uppercase mb-md">Ready to build the future?</h2>
+<p class="font-body-lg text-body-lg text-white/90 max-w-2xl mx-auto mb-lg">Partner with the industry leaders in structural reliability. Let's discuss your next project requirement.</p>
+<div class="flex flex-col sm:flex-row gap-md justify-center">
+<button class="bg-white text-primary font-label-bold text-label-bold uppercase px-xl py-md border-2 border-white hover:bg-transparent hover:text-white transition-all">
+                        START CONSULTATION
+                    </button>
+<button class="border-2 border-white text-white font-label-bold text-label-bold uppercase px-xl py-md hover:bg-white hover:text-primary transition-all">
+                        OUR PROJECTS
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-background border-t border-graphite w-full bottom-0">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-margin py-lg gap-md max-w-7xl mx-auto">
+<div class="flex flex-col gap-xs">
+<span class="text-headline-md font-headline-md text-primary">FREPLAN</span>
+<p class="font-label-bold text-label-bold uppercase text-light-gray">© 2024 FREPLAN INDUSTRIAL SOLUTIONS. ALL RIGHTS RESERVED.</p>
+</div>
+<div class="flex gap-md">
+<a class="font-label-bold text-label-bold uppercase text-light-gray hover:text-white transition-colors" href="#">PRIVACY POLICY</a>
+<a class="font-label-bold text-label-bold uppercase text-light-gray hover:text-white transition-colors" href="#">TERMS OF SERVICE</a>
+<a class="font-label-bold text-label-bold uppercase text-light-gray hover:text-white transition-colors" href="#">CONTACT</a>
+</div>
+</div>
+</footer>
+</body></html>
