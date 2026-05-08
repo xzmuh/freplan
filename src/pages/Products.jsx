@@ -1,71 +1,240 @@
+const whatsappNumber = '5514998701514';
+
+function buildWhatsAppLink(productName) {
+  const message = `Olá, tenho interesse em solicitar orçamento para ${productName}. Gostaria de conversar sobre medidas, material e aplicação da peça.`;
+
+  return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+}
+
 export default function Products() {
-  const productsHeroImage = `${import.meta.env.BASE_URL}img/products-hero-image.png`;
+  const assetBase = import.meta.env.BASE_URL;
+  const productsHeroImage = `${assetBase}img/products-hero-image.png`;
+  const productHighlights = [
+    {
+      title: 'Engrenagens',
+      shortTitle: 'Engrenagens',
+      text: 'Engrenagens e rodas dentadas usinadas sob medida para reposição, manutenção e aplicações industriais específicas.',
+      image: `${assetBase}img/produtos-engrenagem.jpeg`,
+      alt: 'Engrenagem industrial usinada pela Freplan',
+      tags: ['Sob medida', 'Reposição', 'Usinagem'],
+      details: ['Dimensões sob projeto', 'Material conforme aplicação', 'Peça fabricada pela Freplan'],
+      icon: 'settings',
+    },
+    {
+      title: 'Eixos',
+      shortTitle: 'Eixos',
+      text: 'Eixos, roscas e componentes torneados com acabamento técnico para conjuntos mecânicos e máquinas industriais.',
+      image: `${assetBase}img/produtos-eixos.png`,
+      alt: 'Eixos metálicos torneados',
+      tags: ['Tornearia', 'Roscas', 'Manutenção'],
+      details: ['Torneamento técnico', 'Acabamento dimensional', 'Conversão por amostra ou desenho'],
+      icon: 'straighten',
+    },
+    {
+      title: 'Moldes e componentes especiais',
+      shortTitle: 'Moldes',
+      text: 'Peças técnicas fabricadas conforme desenho, amostra ou necessidade de adaptação do equipamento.',
+      image: `${assetBase}img/produtos-moldes.png`,
+      alt: 'Componente metálico especial usinado',
+      tags: ['Projeto especial', 'Amostra', 'Adaptação'],
+      details: ['Desenvolvimento sob demanda', 'Ajuste para aplicação real', 'Fabricação unitária ou por lote'],
+      icon: 'architecture',
+    },
+    {
+      title: 'Peças em inox',
+      shortTitle: 'Inox',
+      text: 'Soluções em inox para aplicações que pedem resistência, durabilidade e acabamento limpo.',
+      image: `${assetBase}img/produtos-componentes-inox.jpeg`,
+      alt: 'Peças circulares em inox com acabamento usinado',
+      tags: ['Inox', 'Acabamento', 'Durabilidade'],
+      details: ['Peças resistentes à corrosão', 'Acabamento técnico', 'Aplicações industriais e sanitárias'],
+      icon: 'verified',
+    },
+    {
+      title: 'Helicóide',
+      shortTitle: 'Helicóide',
+      text: 'Helicóides em aço inox para transporte contínuo de materiais, com alta resistência, durabilidade e acabamento sob medida.',
+      image: `${assetBase}img/produtos-helicoide.jpeg`,
+      alt: 'Helicóide em aço inox com acabamento usinado para transporte de materiais',
+      tags: ['Transporte', 'Inox', 'Sob medida'],
+      details: ['Passo conforme aplicação', 'Diâmetro sob consulta', 'Produção para sistemas industriais'],
+      icon: 'sync_alt',
+    },
+    {
+      title: 'Envase',
+      shortTitle: 'Envase',
+      text: 'Peças, bicos, conexões e componentes usinados para manutenção, reposição e adaptação de sistemas de envase industrial.',
+      image: `${assetBase}img/produtos-envase.jpeg`,
+      alt: 'Componentes usinados para sistema de envase industrial',
+      tags: ['Envase', 'Reposição', 'Adaptação'],
+      details: ['Componentes para linha industrial', 'Peças por desenho ou amostra', 'Ajustes para manutenção'],
+      icon: 'precision_manufacturing',
+    },
+  ];
+  const processSteps = [
+    ['01', 'Escolha o tipo de peça', 'Use o catálogo para indicar a solução mais próxima da sua necessidade.'],
+    ['02', 'Envie medidas e aplicação', 'Pelo WhatsApp, nossa equipe entende material, desenho, amostra e ambiente de uso.'],
+    ['03', 'Receba a orientação técnica', 'Avaliamos viabilidade, processo de fabricação e próximos passos para orçamento.'],
+  ];
 
   return (
     <>
-      <header className="relative w-full min-h-[60vh] flex flex-col items-center justify-center text-center px-margin py-xl border-b-2 border-surface-variant overflow-hidden">
+      <header className="relative w-full min-h-[64vh] flex items-center px-margin py-xl border-b-2 border-surface-variant overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
             alt="Estrutura industrial"
-            className="w-full h-full object-cover opacity-30 grayscale"
+            className="w-full h-full object-cover opacity-28 grayscale"
             src={productsHeroImage}
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-surface/90 via-surface/75 to-surface/95"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-surface via-surface/90 to-surface/45"></div>
+          <div className="absolute inset-0 technical-grid-soft opacity-80"></div>
         </div>
-        <div className="relative z-10 max-w-5xl">
-          <h1 className="font-headline-xl text-headline-xl text-secondary mb-md uppercase">
-            Conheça algumas de nossas soluções já fabricadas
-          </h1>
-          <p className="font-body-lg text-body-lg text-tertiary max-w-2xl mx-auto uppercase tracking-wider">
-            Soluções sob medida para fabricação, manutenção e melhoria de processos industriais.
-          </p>
-          <div className="mt-lg">
-            <button className="bg-primary text-white text-headline-md uppercase px-md py-sm text-sm hover:bg-black hover:text-primary border-2 border-primary transition-all active:scale-95">
-              Explorar catálogo
-            </button>
+        <div className="relative z-10 grid w-full max-w-7xl mx-auto grid-cols-1 gap-lg lg:grid-cols-12 lg:items-end">
+          <div className="lg:col-span-7">
+            <span className="font-label-bold text-primary tracking-widest uppercase mb-sm block">Catálogo sob consulta</span>
+            <h1 className="font-headline-xl text-headline-xl text-secondary mb-md uppercase">
+              Solicite peças industriais fabricadas sob medida
+            </h1>
+            <p className="font-body-lg text-body-lg text-tertiary max-w-2xl uppercase tracking-wider">
+              Escolha a categoria mais próxima da sua demanda e fale com a Freplan pelo WhatsApp. Medidas, material e aplicação são alinhados no atendimento técnico.
+            </p>
+          </div>
+          <div className="lg:col-span-5 border-l-4 border-primary bg-surface/80 p-md backdrop-blur-sm shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]">
+            <span className="font-label-bold text-label-bold text-primary uppercase mb-sm block">Como funciona</span>
+            <div className="space-y-sm">
+              {processSteps.map(([number, title, text]) => (
+                <div key={number} className="grid grid-cols-[44px_1fr] gap-sm border-b border-outline-variant pb-sm last:border-b-0 last:pb-0">
+                  <span className="font-headline-md text-primary">{number}</span>
+                  <div>
+                    <h2 className="font-label-bold text-label-bold text-secondary uppercase">{title}</h2>
+                    <p className="font-body-md text-sm text-light-gray">{text}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </header>
 
-      <section className="px-margin py-xl max-w-7xl mx-auto">
+      <section className="border-b border-outline-variant bg-surface-container-lowest px-margin py-md">
+        <div className="max-w-7xl mx-auto">
+          <div className="mb-sm flex items-center justify-between gap-md">
+            <span className="font-label-bold text-label-bold text-primary uppercase tracking-widest">Nossas categorias</span>
+            <span className="hidden font-body-md text-sm text-light-gray sm:block">Orçamento técnico via WhatsApp</span>
+          </div>
+          <div className="flex gap-sm overflow-x-auto pb-sm snap-x">
+            {productHighlights.map((product) => (
+              <span
+                key={product.title}
+                className="snap-start shrink-0 border border-outline-variant bg-surface-container px-md py-sm font-label-bold text-label-bold text-secondary uppercase transition-all hover:border-primary hover:text-primary active:scale-[0.98]"
+                href={`#${product.shortTitle.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '')}`}
+              >
+                {product.shortTitle}
+              </span>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="catalogo-produtos" className="px-margin py-xl md:px-0 max-w-7xl mx-auto">
+        <div className="mb-lg grid grid-cols-1 gap-md md:grid-cols-12 md:items-end">
+          <div className="md:col-span-7">
+            <span className="font-label-bold text-primary tracking-widest uppercase mb-sm block">Produtos fabricados pela Freplan</span>
+            <h2 className="font-headline-lg text-headline-lg text-secondary uppercase">
+              Catálogo consultivo para orçamento sob medida
+            </h2>
+          </div>
+          <p className="font-body-md text-body-md text-light-gray md:col-span-5">
+            As fotos mostram produtos fabricados pela nossa equipe. Cada item abaixo abre uma conversa já direcionada para a solução escolhida.
+          </p>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
-          {[
-            ['Usinagem de precisão', 'Fabricação de peças e componentes sob medida para aplicações que exigem alto padrão dimensional.', 'precision_manufacturing'],
-            ['Tornearia industrial', 'Produção e acabamento de componentes para manutenção, reposição e melhoria de equipamentos industriais.', 'settings'],
-            ['Solda e montagem', 'Soluções soldadas e conjuntos industriais com foco em resistência, confiabilidade e compatibilidade técnica.', 'construction'],
-            ['Adaptações industriais', 'Adequação de peças e componentes para continuidade operacional e melhoria de desempenho.', 'engineering'],
-            ['Soluções em inox', 'Produção sob medida em inox para aplicações que demandam acabamento, resistência e durabilidade.', 'architecture'],
-            ['Projetos sob demanda', 'Desenvolvimento conforme necessidade técnica, aplicação e ambiente operacional do cliente.', 'inventory_2'],
-          ].map(([title, text, icon], index) => (
-            <div key={title} className="bg-surface-container border-2 border-surface-variant flex flex-col">
-              <div className={index % 2 === 0 ? "h-3 bg-primary-container" : "h-3 bg-graphite"}></div>
-              <div className="p-md flex flex-col flex-grow">
-                <div className="w-full h-48 bg-surface-container-highest mb-md border border-outline-variant flex items-center justify-center">
-                  <span className="material-symbols-outlined text-headline-xl text-primary">{icon}</span>
+          {productHighlights.map((product, index) => (
+            <article
+              key={product.title}
+              id={product.shortTitle.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '')}
+              className="group bg-surface-container border-2 border-surface-variant overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-1 hover:border-primary"
+            >
+              <a
+                aria-label={`Solicitar orçamento para ${product.title}`}
+                className="relative aspect-[4/3] overflow-hidden bg-surface-container-highest block"
+                href={buildWhatsAppLink(product.title)}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  alt={product.alt}
+                  className="h-full w-full object-cover grayscale transition duration-500 group-hover:grayscale-0 group-hover:scale-[1.03]"
+                  src={product.image}
+                />
+                <div className="absolute left-0 top-0 h-3 w-full bg-primary-container"></div>
+                {/* <span className="absolute left-md top-md bg-surface/90 px-sm py-xs font-label-bold text-label-bold text-primary uppercase">
+                  Fabricado pela Freplan
+                </span> */}
+                {/* <span className="absolute bottom-md left-md bg-primary px-sm py-xs font-label-bold text-label-bold text-white uppercase">
+                  Item {String(index + 1).padStart(2, '0')}
+                </span> */}
+              </a>
+
+              <div className="p-md md:p-lg flex flex-1 flex-col">
+                <div className="mb-sm flex items-start justify-between gap-sm">
+                  <h3 className="font-headline-md text-headline-md text-secondary uppercase">{product.title}</h3>
+                  <span className="material-symbols-outlined text-primary text-3xl">{product.icon}</span>
                 </div>
-                <span className="font-label-bold text-label-bold text-primary uppercase mb-xs">Solução {String(index + 1).padStart(2, '0')}</span>
-                <h3 className="font-headline-md text-headline-md text-secondary uppercase mb-sm">{title}</h3>
-                <p className="font-body-md text-body-md text-light-gray mb-md flex-grow">{text}</p>
-                <a className="font-label-bold text-label-bold text-primary uppercase flex items-center gap-xs hover:underline decoration-2 underline-offset-4" href="#">
-                  Ver detalhes <span className="material-symbols-outlined text-sm">arrow_forward</span>
+                <p className="font-body-md text-body-md text-light-gray mb-md">{product.text}</p>
+
+                <div className="mb-md flex flex-wrap gap-xs">
+                  {product.tags.map((tag) => (
+                    <span key={tag} className="border border-outline-variant px-sm py-xs font-label-bold text-[11px] uppercase tracking-wider text-tertiary">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+
+                <ul className="mb-lg space-y-xs border-t border-outline-variant pt-sm">
+                  {product.details.map((detail) => (
+                    <li key={detail} className="flex gap-xs font-body-md text-sm text-light-gray">
+                      <span className="mt-[7px] h-1.5 w-1.5 shrink-0 bg-primary"></span>
+                      {detail}
+                    </li>
+                  ))}
+                </ul>
+
+                <a
+                  className="mt-auto flex min-h-12 items-center justify-center gap-xs bg-primary px-md py-sm font-label-bold text-label-bold uppercase text-white transition-all hover:bg-white hover:text-black active:scale-[0.98]"
+                  href={buildWhatsAppLink(product.title)}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Solicitar orçamento
+                  <span className="material-symbols-outlined text-base">arrow_forward</span>
                 </a>
               </div>
-            </div>
+            </article>
           ))}
         </div>
       </section>
 
       <section className="bg-surface-container-lowest border-t-4 border-surface-container-highest px-margin py-xl w-full">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-lg border-2 border-surface-variant p-lg relative overflow-hidden">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 gap-lg border-2 border-surface-variant p-lg relative overflow-hidden md:grid-cols-12 md:items-center">
           <div className="absolute top-0 left-0 hazard-stripes-primary w-2 h-full"></div>
-          <div className="flex-1">
-            <h2 className="font-headline-lg text-headline-lg text-secondary uppercase mb-sm">Fabricação sob medida para a realidade do seu projeto</h2>
-            <p className="font-body-lg text-body-lg text-tertiary uppercase tracking-wide">Nossa equipe técnica avalia a aplicação, o ambiente operacional e os requisitos de cada demanda para desenvolver uma solução funcional e confiável.</p>
+          <div className="md:col-span-8">
+            <span className="font-label-bold text-primary tracking-widest uppercase mb-sm block">Atendimento técnico</span>
+            <h2 className="font-headline-lg text-headline-lg text-secondary uppercase mb-sm">Não encontrou exatamente o que precisa?</h2>
+            <p className="font-body-lg text-body-lg text-tertiary uppercase tracking-wide">
+              Envie uma foto, desenho ou descrição da aplicação. A Freplan avalia a demanda e orienta o caminho para fabricar a peça correta.
+            </p>
           </div>
-          <div className="flex flex-col gap-sm shrink-0">
-            <button onClick={() => window.open('https://wa.me/5514998701514', '_blank')} className="bg-primary-container text-on-primary-container font-label-bold text-label-bold uppercase px-xl py-md hover:bg-white hover:text-black transition-all">
-              Entre em contato
-            </button>
+          <div className="md:col-span-4">
+            <a
+              href={buildWhatsAppLink('uma peça sob medida')}
+              target="_blank"
+              rel="noreferrer"
+              className="flex min-h-14 w-full items-center justify-center bg-primary-container px-xl py-md font-label-bold text-label-bold uppercase text-on-primary-container transition-all hover:bg-white hover:text-black active:scale-[0.98]"
+            >
+              Falar com a Freplan
+            </a>
           </div>
         </div>
       </section>

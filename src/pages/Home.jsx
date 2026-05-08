@@ -66,8 +66,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-xl px-margin border-t border-outline">
-        <div className="max-w-7xl mx-auto">
+      <section className="relative overflow-hidden py-xl px-margin border-t border-outline technical-grid-soft">
+        <div className="absolute inset-0 bg-gradient-to-b from-surface via-surface/80 to-surface pointer-events-none"></div>
+        <div className="relative max-w-7xl mx-auto">
           <div className="flex flex-col mb-xl gap-sm">
             <span className="font-label-bold text-primary tracking-widest uppercase">Serviços</span>
             <h2 className="font-headline-lg text-headline-lg uppercase text-secondary">Capacidade de atender desafios de diferentes escalas</h2>
@@ -94,8 +95,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-[150px] px-margin bg-surface-container/20 overflow-x-hidden">
-        <div className="max-w-7xl mx-auto">
+      <section className="relative py-[150px] px-margin bg-surface-container/20 overflow-hidden machined-lines-soft">
+        <div className="absolute inset-0 bg-gradient-to-r from-surface/95 via-transparent to-surface/95 pointer-events-none"></div>
+        <div className="relative max-w-7xl mx-auto">
           <div className="flex flex-col mb-xl gap-sm items-center text-center">
             <span className="font-label-bold text-primary tracking-widest uppercase">Processo</span>
             <h2 className="font-headline-lg text-headline-lg uppercase text-secondary">Do entendimento à aplicação final</h2>
@@ -174,7 +176,9 @@ export default function Home() {
       </section>
 
       <section className="py-xl px-margin">
-        <div className="max-w-7xl mx-auto text-center py-xl border-y border-outline">
+        <div className="relative max-w-7xl mx-auto text-center py-xl border-y border-outline overflow-hidden technical-grid-soft">
+          <div className="absolute inset-0 bg-surface/88 pointer-events-none"></div>
+          <div className="relative px-md">
           <h2 className="font-headline-lg text-headline-lg uppercase mb-md">
             Tem uma demanda industrial específica?
           </h2>
@@ -190,6 +194,7 @@ export default function Home() {
           >
             Falar com a Freplan
           </button>
+          </div>
         </div>
       </section>
     </>
