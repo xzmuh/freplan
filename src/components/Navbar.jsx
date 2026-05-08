@@ -4,6 +4,7 @@ import { Link, useLocation } from 'react-router-dom';
 export default function Navbar() {
   const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const assetBase = import.meta.env.BASE_URL;
 
   const getLinkClass = (path) => {
     const baseClass = 'font-headline-md text-headline-md uppercase transition-colors ';
@@ -23,8 +24,12 @@ export default function Navbar() {
   return (
     <nav className="bg-surface top-0 z-50 border-b-4 border-surface-container-highest w-full px-margin py-sm mx-auto sticky">
       <div className="flex items-center justify-between gap-sm">
-        <Link to="/" className="font-headline-lg text-[32px] md:text-headline-lg leading-none font-bold text-secondary">
-          FREPLAN
+        <Link to="/" className="shrink-0 transition-opacity hover:opacity-85" aria-label="Freplan - Home">
+          <img
+            className="h-9 w-auto max-w-[160px] object-contain md:h-11 md:max-w-[210px]"
+            src={`${assetBase}img/brand/freplan-logomarca.png`}
+            alt="Freplan"
+          />
         </Link>
 
         <div className="hidden md:flex gap-lg">

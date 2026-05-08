@@ -26,14 +26,21 @@ const contactItems = [
 ];
 
 export default function Contact() {
+  const assetBase = import.meta.env.BASE_URL;
   const mapQuery = encodeURIComponent('Av. Carlos Gomes box 4 Agudos SP');
 
   return (
     <>
       <header className="relative overflow-hidden border-b-2 border-surface-variant bg-surface-container-lowest px-margin py-xl">
         <div className="absolute inset-y-0 right-0 hidden w-1/2 industrial-grid opacity-40 md:block"></div>
-        <div className="relative mx-auto grid max-w-7xl grid-cols-1 gap-xl lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
-          <div>
+        <img
+          aria-hidden="true"
+          className="absolute right-6 top-8 hidden w-[min(26vw,300px)] object-contain opacity-[0.08] lg:block"
+          src={`${assetBase}img/brand/freplan-simbolo.png`}
+          alt=""
+        />
+        <div className="relative mx-auto grid max-w-7xl grid-cols-1 gap-xl lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:items-end">
+          <div className="min-w-0">
             <div className="hazard-stripes-primary mb-md h-1.5 w-24"></div>
             <p className="mb-sm font-label-bold text-label-bold uppercase tracking-widest text-primary">
               Contato
@@ -43,7 +50,7 @@ export default function Contact() {
             </h1>
           </div>
 
-          <div className="border-l-4 border-primary bg-surface/70 p-md">
+          <div className="min-w-0 border-l-4 border-primary bg-surface/70 p-md">
             <p className="font-body-lg text-body-lg text-on-surface-variant">
               Atendimento para usinagem, tornearia, fabricação sob medida e manutenção industrial, com envio para todo o Brasil.
             </p>
@@ -67,13 +74,13 @@ export default function Contact() {
         </div>
       </header>
 
-      <section className="px-margin py-xl">
-        <div className="mx-auto grid max-w-7xl grid-cols-1 gap-gutter lg:grid-cols-[0.9fr_1.1fr]">
-          <div className="grid grid-cols-1 gap-md sm:grid-cols-2 lg:grid-cols-1">
+      <section className="overflow-hidden px-margin py-xl">
+        <div className="mx-auto grid max-w-7xl grid-cols-1 gap-gutter lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]">
+          <div className="grid min-w-0 grid-cols-1 gap-md sm:grid-cols-2 lg:grid-cols-1">
             {contactItems.map((item) => (
               <a
                 key={item.label}
-                className="group border border-surface-container-highest bg-surface-container-low p-md transition-colors hover:border-primary"
+                className="group min-w-0 border border-surface-container-highest bg-surface-container-low p-md transition-colors hover:border-primary"
                 href={item.href}
                 target={item.href.startsWith('http') ? '_blank' : undefined}
                 rel={item.href.startsWith('http') ? 'noreferrer' : undefined}
@@ -84,14 +91,14 @@ export default function Contact() {
                 <p className="mb-xs font-label-bold text-label-bold uppercase tracking-widest text-light-gray">
                   {item.label}
                 </p>
-                <p className="break-words font-headline-md text-headline-md uppercase text-secondary group-hover:text-primary">
+                <p className="break-words font-headline-md text-headline-md text-secondary group-hover:text-primary [overflow-wrap:anywhere]">
                   {item.value}
                 </p>
               </a>
             ))}
           </div>
 
-          <div className="border-2 border-surface-variant bg-surface-container-lowest">
+          <div className="min-w-0 overflow-hidden border-2 border-surface-variant bg-surface-container-lowest">
             <div className="grid grid-cols-1 border-b border-surface-variant md:grid-cols-3">
               <div className="border-b border-surface-variant p-md md:border-b-0 md:border-r">
                 <span className="font-label-bold text-label-bold uppercase text-primary">Horário</span>

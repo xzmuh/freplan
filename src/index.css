@@ -5,10 +5,16 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    overflow-x: clip;
   }
 
   body { 
     @apply bg-background text-on-background antialiased overflow-x-hidden;
+  }
+
+  #root {
+    width: 100%;
+    overflow-x: clip;
   }
 }
 

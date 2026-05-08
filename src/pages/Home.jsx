@@ -7,6 +7,12 @@ export default function Home() {
         <div className="absolute inset-0 z-0">
           <img alt="Estrutura industrial" className="w-full h-full object-cover opacity-25 grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdS8igT5JKuY4hS_btBXUW9yBxnKOqfIPBhg0TOeYHq30dMfQZYbGOxinj7A8b9tha4Of8MHpkQuqrCdFXquFMORXEEgYxH0vgLkKk23MTz8ZGAFvsttS78j9BtRo5i3pa-GDh_rnBF44IZu_Z_MTtHxJ6sR9aoskLOL0xXig_XncFIBFEHfHVmOUvVkky_BjEKMViOrCskY8KOdne9oZCFd4HddtWNDqtR1sHx6VsTrVMlJXISuzAZr3PYLok2X42F_qpSXPG-3QL" />
           <div className="absolute inset-0 bg-gradient-to-r from-surface via-surface/75 to-surface/20"></div>
+          <img
+            aria-hidden="true"
+            className="absolute right-[max(32px,8vw)] top-1/2 hidden w-[min(30vw,360px)] -translate-y-1/2 object-contain opacity-[0.09] lg:block"
+            src={`${assetBase}img/brand/freplan-simbolo.png`}
+            alt=""
+          />
         </div>
         <div className="relative z-10 px-margin w-full max-w-7xl mx-auto">
           <div className="hazard-stripes-primary h-1.5 w-20 md:w-24 mb-sm md:mb-md"></div>
