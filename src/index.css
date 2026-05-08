@@ -24,11 +24,11 @@
   }
 
   .reveal-section {
-    opacity: 0;
-    transform: translate3d(0, 28px, 0);
+    opacity: 0.82;
+    transform: translate3d(0, 12px, 0);
     transition:
-      opacity 720ms cubic-bezier(0.16, 1, 0.3, 1),
-      transform 720ms cubic-bezier(0.16, 1, 0.3, 1);
+      opacity 360ms cubic-bezier(0.16, 1, 0.3, 1),
+      transform 360ms cubic-bezier(0.16, 1, 0.3, 1);
     transition-delay: var(--reveal-delay, 0ms);
     will-change: opacity, transform;
   }

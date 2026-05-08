@@ -30,7 +30,7 @@ export default function ScrollManager() {
     revealTargets.forEach((element, index) => {
       element.classList.add('reveal-section');
       element.classList.remove('is-visible');
-      element.style.setProperty('--reveal-delay', `${Math.min(index, 4) * 80}ms`);
+      element.style.setProperty('--reveal-delay', `${Math.min(index, 2) * 40}ms`);
     });
 
     const observer = new IntersectionObserver(
@@ -43,8 +43,8 @@ export default function ScrollManager() {
         });
       },
       {
-        rootMargin: '0px 0px -12% 0px',
-        threshold: 0.12,
+        rootMargin: '20% 0px 10% 0px',
+        threshold: 0.01,
       }
     );
 

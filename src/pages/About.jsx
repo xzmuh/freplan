@@ -6,7 +6,7 @@ export default function About() {
       <main>
         <section className="relative py-xl flex items-center border-b border-graphite bg-surface-container-lowest">
           <div className="absolute inset-0 z-0">
-            <img alt="Estrutura industrial" className="w-full h-full object-cover opacity-25 grayscale" src={`${assetBase}img/freplanLocal.jpeg`} />
+            <img alt="Estrutura industrial" className="w-full h-full object-cover opacity-25 grayscale" src={`${assetBase}img/header.png`} />
             <div className="absolute inset-0 bg-gradient-to-r from-surface via-surface/75 to-surface/20"></div>
           </div>
           <div className="relative z-10 px-margin max-w-7xl mx-auto w-full py-lg">
