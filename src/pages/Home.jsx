@@ -5,11 +5,13 @@ export default function Home() {
     <>
       <section className="relative min-h-[calc(100dvh-72px)] md:min-h-[calc(100dvh-88px)] flex items-center overflow-hidden py-[clamp(40px,8dvh,88px)]">
         <div className="absolute inset-0 z-0">
-          <img alt="Estrutura industrial" className="w-full h-full object-cover opacity-25 grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdS8igT5JKuY4hS_btBXUW9yBxnKOqfIPBhg0TOeYHq30dMfQZYbGOxinj7A8b9tha4Of8MHpkQuqrCdFXquFMORXEEgYxH0vgLkKk23MTz8ZGAFvsttS78j9BtRo5i3pa-GDh_rnBF44IZu_Z_MTtHxJ6sR9aoskLOL0xXig_XncFIBFEHfHVmOUvVkky_BjEKMViOrCskY8KOdne9oZCFd4HddtWNDqtR1sHx6VsTrVMlJXISuzAZr3PYLok2X42F_qpSXPG-3QL" />
-          <div className="absolute inset-0 bg-gradient-to-r from-surface via-surface/75 to-surface/20"></div>
+          <div className="absolute inset-0 technical-grid-soft opacity-60"></div>
+          <img alt="Estrutura industrial" className="absolute inset-0 h-full w-full object-cover object-center opacity-32 grayscale" src={`${assetBase}img/hero.png`} />
+          <div className="absolute inset-0 bg-gradient-to-r from-surface/94 via-surface/72 to-surface/34"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-surface/22 via-transparent to-surface/58"></div>
           <img
             aria-hidden="true"
-            className="absolute right-[max(32px,8vw)] top-1/2 hidden w-[min(30vw,360px)] -translate-y-1/2 object-contain opacity-[0.09] lg:block"
+            className="absolute left-[max(32px,8vw)] top-1/2 hidden w-[min(30vw,360px)] -translate-y-1/2 object-contain opacity-[0.09] lg:block"
             src={`${assetBase}img/brand/freplan-simbolo.png`}
             alt=""
           />
@@ -179,21 +181,21 @@ export default function Home() {
         <div className="relative max-w-7xl mx-auto text-center py-xl border-y border-outline overflow-hidden technical-grid-soft">
           <div className="absolute inset-0 bg-surface/88 pointer-events-none"></div>
           <div className="relative px-md">
-          <h2 className="font-headline-lg text-headline-lg uppercase mb-md">
-            Tem uma demanda industrial específica?
-          </h2>
+            <h2 className="font-headline-lg text-headline-lg uppercase mb-md">
+              Tem uma demanda industrial específica?
+            </h2>
 
-          <p className="font-body-lg text-on-surface-variant mb-lg max-w-2xl mx-auto">
-            Fale com a Freplan e apresente sua necessidade. Nossa equipe avalia o projeto
-            e orienta o melhor caminho para desenvolver a solução adequada.
-          </p>
+            <p className="font-body-lg text-on-surface-variant mb-lg max-w-2xl mx-auto">
+              Fale com a Freplan e apresente sua necessidade. Nossa equipe avalia o projeto
+              e orienta o melhor caminho para desenvolver a solução adequada.
+            </p>
 
-          <button
-            onClick={() => window.open('https://wa.me/5514998701514', '_blank')}
-            className="bg-primary text-secondary font-label-bold text-label-bold uppercase px-xl py-md text-lg hover:bg-white hover:text-black transition-all"
-          >
-            Falar com a Freplan
-          </button>
+            <button
+              onClick={() => window.open('https://wa.me/5514998701514', '_blank')}
+              className="bg-primary text-secondary font-label-bold text-label-bold uppercase px-xl py-md text-lg hover:bg-white hover:text-black transition-all"
+            >
+              Falar com a Freplan
+            </button>
           </div>
         </div>
       </section>
