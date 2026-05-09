@@ -1,5 +1,44 @@
 export default function Home() {
   const assetBase = import.meta.env.BASE_URL;
+  const categoryRail = [
+    {
+      title: 'Engrenagens',
+      text: 'Rodas dentadas e reposição sob medida',
+      image: `${assetBase}img/produtos-engrenagem.jpeg`,
+      icon: 'settings',
+    },
+    {
+      title: 'Eixos',
+      text: 'Peças torneadas para máquinas e conjuntos',
+      image: `${assetBase}img/produtos-eixos.png`,
+      icon: 'straighten',
+    },
+    {
+      title: 'Moldes',
+      text: 'Componentes especiais por amostra ou desenho',
+      image: `${assetBase}img/produtos-moldes.png`,
+      icon: 'architecture',
+    },
+    {
+      title: 'Peças em inox',
+      text: 'Soluções resistentes para uso industrial',
+      image: `${assetBase}img/produtos-componentes-inox.jpeg`,
+      icon: 'verified',
+    },
+    {
+      title: 'Helicóide',
+      text: 'Transporte contínuo de materiais',
+      image: `${assetBase}img/produtos-helicoide.jpeg`,
+      icon: 'sync_alt',
+    },
+    {
+      title: 'Envase',
+      text: 'Bicos, conexões e peças de reposição',
+      image: `${assetBase}img/produtos-envase.jpeg`,
+      icon: 'precision_manufacturing',
+    },
+  ];
+  const categoryRailLoop = [...categoryRail, ...categoryRail];
 
   return (
     <>
@@ -32,6 +71,57 @@ export default function Home() {
             <button onClick={() => window.open('https://wa.me/5514998701514', '_blank')} className="w-full sm:w-auto min-h-12 border-2 border-primary text-primary font-label-bold text-label-bold uppercase px-md py-sm text-md hover:bg-primary hover:text-white transition-all">
               Falar com a Freplan
             </button>
+          </div>
+        </div>
+      </section>
+
+      <section className="relative overflow-hidden border-y border-outline-variant bg-surface-container-lowest">
+        <div className="absolute inset-0 technical-grid-soft opacity-55 pointer-events-none"></div>
+        <div className="relative max-w-7xl mx-auto py-md">
+          <div className="grid grid-cols-1 gap-md lg:grid-cols-[280px_1fr_180px] lg:items-center">
+            <div className="px-margin lg:px-0">
+              <span className="font-label-bold text-label-bold text-primary uppercase tracking-widest block mb-xs">O que fabricamos</span>
+              <h2 className="font-headline-md text-2xl uppercase text-secondary">Categorias para identificar sua demanda</h2>
+            </div>
+
+            <div className="relative -mx-margin overflow-hidden lg:mx-0">
+              <div className="pointer-events-none absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-surface-container-lowest to-transparent z-10"></div>
+              <div className="pointer-events-none absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-surface-container-lowest to-transparent z-10"></div>
+              <div className="category-marquee flex w-max gap-sm px-margin lg:px-0">
+                {categoryRailLoop.map((category, index) => (
+                  <a
+                    key={`${category.title}-${index}`}
+                    href={`${assetBase}#/products`}
+                    className="group grid w-[250px] shrink-0 grid-cols-[82px_1fr] overflow-hidden border border-outline-variant bg-surface-container transition-all hover:border-primary active:scale-[0.98]"
+                    aria-label={`Ver produtos de ${category.title}`}
+                  >
+                    <div className="relative h-full min-h-[92px] bg-surface-container-high">
+                      <img
+                        alt={category.title}
+                        src={category.image}
+                        className="h-full w-full object-cover grayscale transition duration-500 group-hover:grayscale-0 group-hover:scale-[1.04]"
+                      />
+                      <div className="absolute inset-x-0 top-0 h-1 bg-primary"></div>
+                    </div>
+                    <div className="flex min-h-[92px] flex-col justify-between p-sm">
+                      <div>
+                        <span className="font-headline-md text-xl uppercase text-secondary block leading-none">{category.title}</span>
+                        <span className="mt-xs block font-body-md text-sm leading-snug text-light-gray">{category.text}</span>
+                      </div>
+                      <span className="material-symbols-outlined text-primary text-2xl self-end">{category.icon}</span>
+                    </div>
+                  </a>
+                ))}
+              </div>
+            </div>
+
+            <a
+              href={`${assetBase}#/products`}
+              className="mx-margin flex min-h-12 items-center justify-center gap-xs border-2 border-primary px-md py-sm font-label-bold text-label-bold uppercase text-primary transition-all hover:bg-primary hover:text-white active:scale-[0.98] lg:mx-0"
+            >
+              Ver produtos
+              <span className="material-symbols-outlined text-base">arrow_forward</span>
+            </a>
           </div>
         </div>
       </section>

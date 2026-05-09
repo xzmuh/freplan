@@ -13,7 +13,7 @@ export default function Products() {
     {
       title: 'Engrenagens',
       shortTitle: 'Engrenagens',
-      text: 'Engrenagens e rodas dentadas usinadas sob medida para reposição, manutenção e aplicações industriais específicas.',
+      text: 'Engrenagens, heliquidais e retas usinadas sob medida para reposição, manutenção e aplicações industriais específicas.',
       image: `${assetBase}img/produtos-engrenagem.jpeg`,
       alt: 'Engrenagem industrial usinada pela Freplan',
       tags: ['Sob medida', 'Reposição', 'Usinagem'],

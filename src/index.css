@@ -43,6 +43,15 @@
   .reveal-section.is-visible a {
     transition-duration: 220ms;
   }
+
+  .category-marquee {
+    animation: category-marquee 34s linear infinite;
+    will-change: transform;
+  }
+
+  .category-marquee:hover {
+    animation-play-state: paused;
+  }
 }
 
 @layer utilities {
@@ -103,13 +112,23 @@
   }
 }
 
+@keyframes category-marquee {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(calc(-50% - 6px), 0, 0);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
   }
 
   .page-enter,
-  .reveal-section {
+  .reveal-section,
+  .category-marquee {
     animation: none;
     opacity: 1;
     transform: none;
