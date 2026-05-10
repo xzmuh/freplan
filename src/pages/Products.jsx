@@ -22,7 +22,7 @@ export default function Products() {
     {
       title: 'Engrenagens',
       shortTitle: 'Engrenagens',
-      text: 'Engrenagens, heliquidais e retas usinadas sob medida para reposição, manutenção e aplicações industriais específicas.',
+      text: 'Engrenagens helicoidais e retas usinadas sob medida para reposição, manutenção e aplicações industriais específicas.',
       image: `${assetBase}img/produtos-engrenagem.jpeg`,
       alt: 'Engrenagem industrial usinada pela Freplan',
       tags: ['Sob medida', 'Reposição', 'Usinagem'],
@@ -171,10 +171,10 @@ export default function Products() {
           <div className="lg:col-span-7">
             <span className="font-label-bold text-primary tracking-widest uppercase mb-sm block">Catálogo sob consulta</span>
             <h1 className="font-headline-xl text-4xl text-secondary mb-md uppercase md:text-headline-xl">
-              Solicite peças industriais fabricadas sob medida
+              Solicite peças industriais fabricadas sob medida pela Freplan
             </h1>
             <p className="font-body-lg text-body-lg text-tertiary max-w-2xl uppercase tracking-wider">
-              Escolha a categoria mais próxima da sua demanda e fale com a Freplan pelo WhatsApp. Medidas, material e aplicação são alinhados no atendimento técnico.
+              Escolha a categoria mais próxima da sua demanda de usinagem, tornearia ou manutenção industrial e fale com a Freplan pelo WhatsApp. Medidas, material e aplicação são alinhados no atendimento técnico.
             </p>
           </div>
           <div className="lg:col-span-5 border-l-4 border-primary bg-surface/80 p-md backdrop-blur-sm shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]">

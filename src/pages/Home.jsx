@@ -75,7 +75,7 @@
           </h1>
 
           <p className="font-body-lg text-body-lg text-on-surface-variant mb-lg md:mb-xl max-w-2xl border-l border-primary pl-md md:pl-lg">
-            Tornearia, usinagem e fabricação de componentes com precisão, qualidade e foco na necessidade real de cada aplicação.
+            Tornearia, usinagem e fabricação de componentes industriais sob medida para empresas de todo o Brasil, com precisão, qualidade e foco na necessidade real de cada aplicação.
           </p>
           <div className="grid grid-cols-1 sm:flex sm:flex-row gap-sm max-w-xl">
             <button onClick={() => window.open(`${assetBase}#/products`, '_blank')} className="w-full sm:w-auto min-h-12 bg-primary text-secondary font-label-bold text-label-bold uppercase px-md py-sm text-md hover:bg-white hover:text-black transition-all">
@@ -146,7 +146,7 @@
             <span className="font-label-bold text-primary tracking-widest uppercase mb-sm block">Desde 2000</span>
             <h2 className="font-headline-lg text-4xl uppercase text-secondary mb-md md:text-headline-lg">Especializada em fabricação sob medida</h2>
             <p className="font-body-lg text-on-surface-variant mb-md">
-              A Freplan atua no desenvolvimento e fabricação de peças e soluções industriais para diferentes segmentos da indústria. Com experiência prática e foco em qualidade, trabalha lado a lado com seus clientes para entregar soluções funcionais, confiáveis e compatíveis com a realidade operacional de cada projeto.
+              A Freplan atua no desenvolvimento e fabricação de peças e soluções industriais para diferentes segmentos da indústria, atendendo demandas de manutenção, reposição e projetos especiais em todo o Brasil. Com experiência prática e foco em qualidade, trabalha lado a lado com seus clientes para entregar soluções funcionais, confiáveis e compatíveis com a realidade operacional de cada projeto.
               <br />
               Além da fabricação, a empresa busca compreender as necessidades específicas de cada cliente, oferecendo suporte técnico, precisão nos processos e compromisso em transformar demandas industriais em soluções eficientes, duráveis e aplicáveis no dia a dia da operação.            </p>
             <div className="grid grid-cols-2 gap-lg border-t border-outline pt-md mt-lg">
@@ -155,8 +155,8 @@
                 <div className="font-label-bold uppercase text-xs tracking-widest text-secondary/60">início da trajetória</div>
               </div>
               <div>
-                <div className="text-primary font-headline-md text-4xl mb-1">Agudos</div>
-                <div className="font-label-bold uppercase text-xs tracking-widest text-secondary/60">região de Bauru-SP</div>
+                <div className="text-primary font-headline-md text-4xl mb-1">Brasil</div>
+                <div className="font-label-bold uppercase text-xs tracking-widest text-secondary/60">envio nacional</div>
               </div>
             </div>
           </div>

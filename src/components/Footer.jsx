@@ -16,6 +16,7 @@ const navGroups = [
       ['Usinagem', '/products'],
       ['Tornearia', '/products'],
       ['Fresagem', '/products'],
+      ['Envio nacional', '/contact'],
       ['Eixos', '/products'],
       ['Engrenagens', '/products'],
       ['Peças sob medida', '/products'],
@@ -69,7 +70,7 @@ export default function Footer() {
               Peças industriais sob medida, fabricadas para operação real.
             </h2>
             <p className="mt-md max-w-xl font-body-md text-body-md text-light-gray">
-              Tornearia, usinagem e desenvolvimento de componentes para manutenção, reposição e melhoria de equipamentos industriais.
+              Tornearia, usinagem e desenvolvimento de componentes para manutenção, reposição e melhoria de equipamentos industriais com envio para todo o Brasil.
             </p>
 
             <div className="mt-lg grid grid-cols-1 gap-sm sm:grid-cols-2">
@@ -123,7 +124,7 @@ export default function Footer() {
                 <a className="mt-xs block font-body-md text-sm text-light-gray transition-colors hover:text-secondary" href="https://wa.me/5514998701514" target="_blank" rel="noreferrer">
                   (14) 99870-1514
                 </a>
-                <a className="mt-xs block font-body-md text-sm text-light-gray transition-colors hover:text-secondary" href="mailto:[EMAIL_ADDRESS]" target="_blank" rel="noreferrer">
+                <a className="mt-xs block font-body-md text-sm text-light-gray transition-colors hover:text-secondary" href="mailto:freplanusinagem@hotmail.com" target="_blank" rel="noreferrer">
                   freplanusinagem@hotmail.com
                 </a>
                 <a className="mt-xs block font-body-md text-sm text-light-gray transition-colors hover:text-secondary" href="https://www.instagram.com/freplanusinagem/" target="_blank" rel="noreferrer">
@@ -132,7 +133,7 @@ export default function Footer() {
               </div>
               <div>
                 <span className="font-label-bold text-[11px] uppercase tracking-widest text-primary">Atuação</span>
-                <p className="mt-xs font-body-md text-sm text-light-gray">Desde 2000 fabricando soluções industriais.</p>
+                <p className="mt-xs font-body-md text-sm text-light-gray">Desde 2000 fabricando peças industriais sob medida, engrenagens, eixos, roldanas e componentes para manutenção.</p>
               </div>
             </div>
           </div>
