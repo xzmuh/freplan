@@ -14,7 +14,7 @@ function AppContent() {
     <div className="flex flex-col min-h-screen">
       <ScrollManager />
       <Navbar />
-      <main key={location.pathname} className="flex-grow page-enter">
+      <main key={location.pathname} className="flex-grow pt-[72px] page-enter">
         <Routes location={location}>
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<Products />} />

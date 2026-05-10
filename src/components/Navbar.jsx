@@ -22,7 +22,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="bg-surface top-0 z-50 border-b-4 border-surface-container-highest w-full px-margin py-sm mx-auto sticky">
+    <nav className="fixed left-0 top-0 z-50 w-full border-b-4 border-surface-container-highest bg-surface/82 px-margin py-sm backdrop-blur-md">
       <div className="flex items-center justify-between gap-sm">
         <Link to="/" className="shrink-0 transition-opacity hover:opacity-85" aria-label="Freplan - Home">
           <img

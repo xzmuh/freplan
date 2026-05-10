@@ -1,4 +1,4 @@
-export default function About() {
+﻿export default function About() {
   const assetBase = import.meta.env.BASE_URL;
 
   return (
@@ -12,7 +12,7 @@ export default function About() {
           <div className="relative z-10 px-margin max-w-7xl mx-auto w-full py-lg">
             <div className="border-l-4 border-primary pl-lg">
               <p className="font-label-bold text-label-bold text-primary tracking-widest uppercase mb-sm">Sobre nós</p>
-              <h1 className="font-headline-xl text-headline-xl uppercase max-w-4xl leading-tight">Soluções industriais sob medida, desde 2000.</h1>
+              <h1 className="font-headline-xl text-4xl uppercase max-w-4xl leading-tight md:text-headline-xl">Soluções industriais sob medida, desde 2000.</h1>
               <div className="mt-lg flex gap-md items-center">
                 <div className="bg-graphite w-16 h-1"></div>
                 <p className="font-body-lg text-body-lg max-w-xl text-light-gray">Uma trajetória construída na prática, com foco em precisão, confiabilidade e entendimento técnico das necessidades industriais.</p>
@@ -24,7 +24,7 @@ export default function About() {
         <section className="py-xl px-margin max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-xl items-start">
             <div>
-              <h2 className="font-headline-lg text-headline-lg uppercase mb-md text-white">A Freplan</h2>
+              <h2 className="font-headline-lg text-4xl uppercase mb-md text-white md:text-headline-lg">A Freplan</h2>
               <div className="space-y-md text-light-gray font-body-lg text-body-lg">
                 <p>A Freplan surgiu em 2000, iniciando sua trajetória com pai e filho trabalhando com apenas uma máquina e o objetivo de construir uma empresa reconhecida pela qualidade e confiabilidade no setor industrial.</p>
                 <p>Com o tempo, a experiência prática e a necessidade do mercado por peças e soluções mais confiáveis impulsionaram o crescimento da empresa. Desde então, a Freplan passou a atuar no desenvolvimento e fabricação de soluções industriais sob medida, atendendo diferentes segmentos com foco em precisão, desempenho e entendimento técnico da aplicação de cada cliente.</p>
@@ -56,7 +56,7 @@ export default function About() {
           <div className="px-margin max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-xl items-center">
               <div>
-                <h2 className="font-headline-xl text-headline-lg uppercase mb-md">Construído na prática, evoluindo com a <span className="text-primary">indústria</span></h2>
+                <h2 className="font-headline-xl text-4xl uppercase mb-md md:text-headline-lg">Construído na prática, evoluindo com a <span className="text-primary">indústria</span></h2>
                 <p className="font-body-lg text-body-lg text-light-gray mb-md">Mais do que fabricar peças, a Freplan construiu sua trajetória baseada em relacionamento, confiança e entendimento técnico das necessidades industriais.</p>
                 <p className="font-body-lg text-body-lg text-light-gray">O crescimento da empresa sempre esteve ligado à qualidade das soluções entregues e à confiança construída ao longo dos anos.</p>
               </div>
@@ -73,7 +73,7 @@ export default function About() {
 
         <section className="py-xl px-margin max-w-7xl mx-auto">
           <div className="text-center mb-xl">
-            <h2 className="font-headline-lg text-headline-lg uppercase text-white">Princípios que orientam cada entrega</h2>
+            <h2 className="font-headline-lg text-4xl uppercase text-white md:text-headline-lg">Princípios que orientam cada entrega</h2>
             <div className="w-16 h-1 bg-primary mx-auto mt-sm"></div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-gutter text-center">
@@ -94,7 +94,7 @@ export default function About() {
         <section className="bg-primary py-xl relative overflow-hidden">
           <div className="absolute inset-0 hazard-stripes opacity-5 pointer-events-none"></div>
           <div className="px-margin max-w-7xl mx-auto text-center relative z-10">
-            <h2 className="font-headline-xl text-headline-xl text-white uppercase mb-md">Precisa de uma solução sob medida?</h2>
+            <h2 className="font-headline-xl text-4xl text-white uppercase mb-md md:text-headline-xl">Precisa de uma solução sob medida?</h2>
             <p className="font-body-lg text-body-lg text-white/90 max-w-2xl mx-auto mb-lg">Conte com a Freplan para desenvolver peças, adaptações e soluções industriais compatíveis com a realidade operacional do seu projeto.</p>
             <div className="flex flex-col sm:flex-row gap-md justify-center">
               <button onClick={() => window.open('https://wa.me/5514998701514', '_blank')} className="bg-white text-primary font-label-bold text-label-bold uppercase px-xl py-sm border-2 border-white hover:bg-transparent hover:text-white transition-all">

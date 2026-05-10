@@ -1,4 +1,4 @@
-export default function Home() {
+﻿export default function Home() {
   const assetBase = import.meta.env.BASE_URL;
   const categoryRail = [
     {
@@ -37,6 +37,19 @@ export default function Home() {
       image: `${assetBase}img/produtos-envase.jpeg`,
       icon: 'precision_manufacturing',
     },
+    {
+      title: 'Roldanas de tração',
+      text: 'Roldanas revestidas e cubos usinados',
+      image: `${assetBase}img/produtos-roldanas-tracao.jpeg`,
+      icon: 'motion_photos_auto',
+    },
+    {
+      title: 'Rosqueadeiras',
+      text: 'Componentes para rosqueamento técnico',
+      image: `${assetBase}img/produtos-rosqueadeiras2.jpeg`,
+      imagePosition: 'center bottom',
+      icon: 'build_circle',
+    },
   ];
   const categoryRailLoop = [...categoryRail, ...categoryRail];
 
@@ -57,7 +70,7 @@ export default function Home() {
         </div>
         <div className="relative z-10 px-margin w-full max-w-7xl mx-auto">
           <div className="hazard-stripes-primary h-1.5 w-20 md:w-24 mb-sm md:mb-md"></div>
-          <h1 className="font-headline-xl text-headline-xl text-secondary uppercase mb-md max-w-5xl">
+          <h1 className="font-headline-xl text-4xl text-secondary uppercase mb-md max-w-5xl md:text-headline-xl">
             Soluções sob medida para operações que <span className="text-primary">não podem parar</span>.
           </h1>
 
@@ -99,7 +112,8 @@ export default function Home() {
                       <img
                         alt={category.title}
                         src={category.image}
-                        className="h-full w-full object-cover grayscale transition duration-500 group-hover:grayscale-0 group-hover:scale-[1.04]"
+                        className="h-full w-full object-cover  transition duration-500  group-hover:scale-[1.04]"
+                        style={category.imagePosition ? { objectPosition: category.imagePosition } : undefined}
                       />
                       <div className="absolute inset-x-0 top-0 h-1 bg-primary"></div>
                     </div>
@@ -130,7 +144,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-xl items-center">
           <div>
             <span className="font-label-bold text-primary tracking-widest uppercase mb-sm block">Desde 2000</span>
-            <h2 className="font-headline-lg text-headline-lg uppercase text-secondary mb-md">Especializada em fabricação sob medida</h2>
+            <h2 className="font-headline-lg text-4xl uppercase text-secondary mb-md md:text-headline-lg">Especializada em fabricação sob medida</h2>
             <p className="font-body-lg text-on-surface-variant mb-md">
               A Freplan atua no desenvolvimento e fabricação de peças e soluções industriais para diferentes segmentos da indústria. Com experiência prática e foco em qualidade, trabalha lado a lado com seus clientes para entregar soluções funcionais, confiáveis e compatíveis com a realidade operacional de cada projeto.
               <br />
@@ -148,7 +162,7 @@ export default function Home() {
           </div>
           <div className="relative">
             <div className="aspect-[4/3] bg-surface-container relative overflow-hidden">
-              <img alt="Detalhe de fabricação industrial" className="w-full h-full object-cover grayscale" src={`${assetBase}img/torno.png`} />
+              <img alt="Lote de peças industriais fabricadas pela Freplan" className="w-full h-full object-cover grayscale" src={`${assetBase}img/home-lote-pecas.jpeg`} />
               <div className="absolute inset-0 border-[14px] border-surface/50 pointer-events-none"></div>
             </div>
             <div className="absolute -bottom-8 -right-8 bg-primary p-md hidden md:block">
@@ -163,7 +177,7 @@ export default function Home() {
         <div className="relative max-w-7xl mx-auto">
           <div className="flex flex-col mb-xl gap-sm">
             <span className="font-label-bold text-primary tracking-widest uppercase">Serviços</span>
-            <h2 className="font-headline-lg text-headline-lg uppercase text-secondary">Capacidade de atender desafios de diferentes escalas</h2>
+            <h2 className="font-headline-lg text-4xl uppercase text-secondary md:text-headline-lg">Capacidade de atender desafios de diferentes escalas</h2>
             <p className="font-body-md text-on-surface-variant max-w-2xl">Da peça unitária à fabricação sob demanda, com precisão e confiabilidade industrial.</p>
           </div>
           <div className="space-y-sm">
@@ -174,8 +188,8 @@ export default function Home() {
             ].map(([number, title, text, icon]) => (
               <div key={number} className="group flex flex-col md:flex-row items-start md:items-center justify-between border-b border-outline py-lg hover:bg-surface-container/20 transition-colors px-4">
                 <div className="flex items-center gap-md mb-sm md:mb-0">
-                  <span className="font-headline-xl text-headline-lg md:text-headline-xl text-outline/50 group-hover:text-primary transition-colors">{number}</span>
-                  <h3 className="font-headline-xl text-3xl md:text-5xl uppercase text-secondary">{title}</h3>
+                  <span className="font-headline-xl text-4xl md:text-headline-xl text-outline/50 group-hover:text-primary transition-colors">{number}</span>
+                  <h3 className="font-headline-xl text-4xl md:text-5xl uppercase text-secondary">{title}</h3>
                 </div>
                 <div className="md:max-w-md">
                   <p className="font-body-md text-on-surface-variant mb-3">{text}</p>
@@ -192,7 +206,7 @@ export default function Home() {
         <div className="relative max-w-7xl mx-auto">
           <div className="flex flex-col mb-xl gap-sm items-center text-center">
             <span className="font-label-bold text-primary tracking-widest uppercase">Processo</span>
-            <h2 className="font-headline-lg text-headline-lg uppercase text-secondary">Do entendimento à aplicação final</h2>
+            <h2 className="font-headline-lg text-4xl uppercase text-secondary md:text-headline-lg">Do entendimento à aplicação final</h2>
           </div>
           <div className="relative pt-md">
             <div className="hidden md:block absolute top-[52px] left-0 w-full h-0.5 bg-outline"></div>
@@ -221,7 +235,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-md mb-xl">
             <div className="max-w-2xl">
               <span className="font-label-bold text-primary tracking-widest uppercase mb-sm block">Diferenciais</span>
-              <h2 className="font-headline-lg text-headline-lg uppercase text-secondary">Compromisso com qualidade, precisão e confiabilidade</h2>
+              <h2 className="font-headline-lg text-4xl uppercase text-secondary md:text-headline-lg">Compromisso com qualidade, precisão e confiabilidade</h2>
             </div>
             <p className="font-body-md text-on-surface-variant max-w-sm">
               Mais do que fabricar peças, a Freplan desenvolve soluções compatíveis com a realidade operacional de cada projeto.
@@ -271,7 +285,7 @@ export default function Home() {
         <div className="relative max-w-7xl mx-auto text-center py-xl border-y border-outline overflow-hidden technical-grid-soft">
           <div className="absolute inset-0 bg-surface/88 pointer-events-none"></div>
           <div className="relative px-md">
-            <h2 className="font-headline-lg text-headline-lg uppercase mb-md">
+            <h2 className="font-headline-lg text-4xl uppercase mb-md md:text-headline-lg">
               Tem uma demanda industrial específica?
             </h2>
 

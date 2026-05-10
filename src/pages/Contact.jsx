@@ -1,4 +1,4 @@
-const contactItems = [
+﻿const contactItems = [
   {
     icon: 'call',
     label: 'Telefone e WhatsApp',
@@ -45,7 +45,7 @@ export default function Contact() {
             <p className="mb-sm font-label-bold text-label-bold uppercase tracking-widest text-primary">
               Contato
             </p>
-            <h1 className="font-headline-xl text-headline-xl text-secondary uppercase mb-md max-w-5xl">
+            <h1 className="font-headline-xl text-4xl text-secondary uppercase mb-md max-w-5xl md:text-headline-xl">
               Fale com a Freplan para orçar sua solução industrial.
             </h1>
           </div>

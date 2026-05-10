@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+﻿import { Link } from 'react-router-dom';
 
 const navGroups = [
   {
@@ -65,7 +65,7 @@ export default function Footer() {
               />
             </Link>
 
-            <h2 className="mt-lg max-w-xl font-headline-lg text-headline-lg uppercase text-secondary">
+            <h2 className="mt-lg max-w-xl font-headline-lg text-4xl uppercase text-secondary md:text-headline-lg">
               Peças industriais sob medida, fabricadas para operação real.
             </h2>
             <p className="mt-md max-w-xl font-body-md text-body-md text-light-gray">
@@ -125,6 +125,9 @@ export default function Footer() {
                 </a>
                 <a className="mt-xs block font-body-md text-sm text-light-gray transition-colors hover:text-secondary" href="mailto:[EMAIL_ADDRESS]" target="_blank" rel="noreferrer">
                   freplanusinagem@hotmail.com
+                </a>
+                <a className="mt-xs block font-body-md text-sm text-light-gray transition-colors hover:text-secondary" href="https://www.instagram.com/freplanusinagem/" target="_blank" rel="noreferrer">
+                  @freplanusinagem
                 </a>
               </div>
               <div>
