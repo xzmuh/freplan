@@ -113,7 +113,6 @@ export default function Home() {
     };
 
     scroller.classList.add('is-dragging');
-    scroller.setPointerCapture?.(event.pointerId);
   };
 
   const handleCategoryPointerMove = (event) => {
@@ -153,8 +152,8 @@ export default function Home() {
 
     drag.isDragging = false;
     drag.pauseUntil = performance.now() + 700;
+    categoryAutoScrollRef.current = scroller.scrollLeft;
     scroller.classList.remove('is-dragging');
-    scroller.releasePointerCapture?.(event.pointerId);
   };
 
   const handleCategoryClick = (event) => {
@@ -189,18 +188,84 @@ export default function Home() {
         </div>
         <div className="relative z-10 px-margin w-full max-w-7xl mx-auto">
           <div className="hazard-stripes-primary h-1.5 w-20 md:w-24 mb-sm md:mb-md"></div>
-          <h1 className="font-headline-xl text-4xl text-secondary uppercase mb-md max-w-5xl md:text-headline-xl">
-            Soluções sob medida para operações que <span className="text-primary">não podem parar</span>.
+          <div className="mb-sm flex flex-wrap gap-xs md:hidden">
+            <span className="border border-primary/80 bg-primary/10 px-sm py-xs font-label-bold text-[11px] uppercase tracking-widest text-primary">
+              Peças sob medida
+            </span>
+            <span className="border border-outline-variant bg-surface/70 px-sm py-xs font-label-bold text-[11px] uppercase tracking-widest text-secondary">
+              Envio Brasil
+            </span>
+          </div>
+          <h1 className="font-headline-xl text-[clamp(34px,10.5vw,48px)] leading-[0.95] text-secondary uppercase mb-md max-w-5xl md:text-headline-xl md:leading-none">
+            <span className="md:hidden">Peças sob medida para sua linha <span className="text-primary">não parar</span>.</span>
+            <span className="hidden md:inline">Soluções sob medida para operações que <span className="text-primary">não podem parar</span>.</span>
           </h1>
 
-          <p className="font-body-lg text-body-lg text-on-surface-variant mb-lg md:mb-xl max-w-2xl border-l border-primary pl-md md:pl-lg">
-            Tornearia, usinagem e fabricação de componentes industriais sob medida para empresas de todo o Brasil, com precisão, qualidade e foco na necessidade real de cada aplicação.
+          <p className="font-body-lg text-base leading-relaxed text-on-surface-variant mb-md max-w-2xl border-l border-primary pl-md md:mb-xl md:text-body-lg md:pl-lg">
+            <span className="md:hidden">Usinagem, tornearia e componentes industriais com atendimento técnico para todo o Brasil.</span>
+            <span className="hidden md:inline">Tornearia, usinagem e fabricação de componentes industriais sob medida para empresas de todo o Brasil, com precisão, qualidade e foco na necessidade real de cada aplicação.</span>
           </p>
-          <div className="grid grid-cols-1 sm:flex sm:flex-row gap-sm max-w-xl">
-            <button onClick={() => window.open(`${assetBase}#/products`, '_blank')} className="w-full sm:w-auto min-h-12 bg-primary text-secondary font-label-bold text-label-bold uppercase px-md py-sm text-md hover:bg-white hover:text-black transition-all">
+
+          <div className="mb-md grid grid-cols-[1.15fr_0.85fr] gap-xs md:hidden">
+            <a
+              href={`${assetBase}#/products`}
+              className="group relative min-h-[164px] overflow-hidden border-2 border-primary bg-surface-container active:scale-[0.99]"
+              aria-label="Conheça as soluções industriais da Freplan"
+            >
+              <img
+                alt="Eixos industriais usinados pela Freplan"
+                className="absolute inset-0 h-full w-full object-cover grayscale transition duration-500 group-active:scale-[1.03]"
+                src={`${assetBase}img/optimized/produtos-eixos.jpg`}
+                fetchPriority="high"
+                decoding="async"
+              />
+              <div className="absolute inset-x-0 top-0 h-2 bg-primary"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-surface/88 via-transparent to-transparent"></div>
+              <div className="absolute bottom-sm left-sm right-sm">
+                <span className="font-label-bold text-[11px] uppercase tracking-widest text-primary">Usinagem</span>
+                <p className="font-headline-md text-2xl uppercase leading-none text-secondary">Eixos e componentes</p>
+              </div>
+            </a>
+            <div className="grid gap-xs">
+              <a
+                href={`${assetBase}#/products`}
+                className="relative min-h-[78px] overflow-hidden border border-outline-variant bg-surface-container active:scale-[0.99]"
+                aria-label="Ver engrenagens industriais"
+              >
+                <img
+                  alt="Engrenagem industrial usinada pela Freplan"
+                  className="absolute inset-0 h-full w-full object-cover grayscale"
+                  src={`${assetBase}img/optimized/produtos-engrenagem.jpg`}
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div className="absolute inset-0 bg-surface/50"></div>
+                <span className="absolute bottom-xs left-xs font-label-bold text-[10px] uppercase tracking-widest text-secondary">Engrenagens</span>
+              </a>
+              <a
+                href={`${assetBase}#/products`}
+                className="relative min-h-[78px] overflow-hidden border border-outline-variant bg-surface-container active:scale-[0.99]"
+                aria-label="Ver peças em inox"
+              >
+                <img
+                  alt="Peças em inox usinadas pela Freplan"
+                  className="absolute inset-0 h-full w-full object-cover grayscale"
+                  src={`${assetBase}img/optimized/produtos-componentes-inox.jpg`}
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div className="absolute inset-0 bg-surface/45"></div>
+                <span className="absolute bottom-xs left-xs font-label-bold text-[10px] uppercase tracking-widest text-secondary">Inox</span>
+              </a>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 gap-sm max-w-xl sm:flex sm:flex-row">
+            <button onClick={() => window.open(`${assetBase}#/products`, '_blank')} className="group flex min-h-14 w-full items-center justify-center gap-xs bg-primary px-md py-sm font-label-bold text-label-bold uppercase text-white transition-all hover:bg-white hover:text-black active:scale-[0.98] sm:w-auto md:min-h-12 md:text-secondary">
               Conheça nossas soluções
+              <span className="material-symbols-outlined text-lg transition-transform group-hover:translate-x-1">arrow_forward</span>
             </button>
-            <button onClick={() => window.open('https://wa.me/5514998701514', '_blank')} className="w-full sm:w-auto min-h-12 border-2 border-primary text-primary font-label-bold text-label-bold uppercase px-md py-sm text-md hover:bg-primary hover:text-white transition-all">
+            <button onClick={() => window.open('https://wa.me/5514998701514', '_blank')} className="w-full sm:w-auto min-h-12 border-2 border-primary text-primary font-label-bold text-label-bold uppercase px-md py-sm text-md hover:bg-primary hover:text-white transition-all active:scale-[0.98]">
               Falar com a Freplan
             </button>
           </div>
@@ -225,8 +290,8 @@ export default function Home() {
               onPointerCancel={handleCategoryPointerUp}
               onPointerLeave={handleCategoryPointerUp}
             >
-              <div className="pointer-events-none absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-surface-container-lowest to-transparent z-10"></div>
-              <div className="pointer-events-none absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-surface-container-lowest to-transparent z-10"></div>
+              <div className="pointer-events-none absolute inset-y-0 left-0 z-10 hidden w-16 bg-gradient-to-r from-surface-container-lowest to-transparent md:block"></div>
+              <div className="pointer-events-none absolute inset-y-0 right-0 z-10 hidden w-16 bg-gradient-to-l from-surface-container-lowest to-transparent md:block"></div>
               <div className="category-marquee flex w-max gap-sm px-margin lg:px-0">
                 {categoryRailLoop.map((category, index) => (
                   <a
