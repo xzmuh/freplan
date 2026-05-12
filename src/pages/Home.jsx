@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+﻿import { useEffect, useRef } from 'react';
 
 export default function Home() {
   const categoryScrollerRef = useRef(null);
@@ -220,10 +220,10 @@ export default function Home() {
                 decoding="async"
               />
               <div className="absolute inset-x-0 top-0 h-2 bg-primary"></div>
-              <div className="absolute inset-0 bg-gradient-to-t from-surface/88 via-transparent to-transparent"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-surface/88 via-transparent bg-surface/10"></div>
               <div className="absolute bottom-sm left-sm right-sm">
                 <span className="font-label-bold text-[11px] uppercase tracking-widest text-primary">Usinagem</span>
-                <p className="font-headline-md text-2xl uppercase leading-none text-secondary">Eixos e componentes</p>
+                {/* <p className="font-headline-md text-2xl uppercase leading-none text-secondary">Eixos e componentes</p> */}
               </div>
             </a>
             <div className="grid gap-xs">
