@@ -326,7 +326,7 @@ export default function Home() {
 
             <a
               href={`${assetBase}#/products`}
-              className="mx-margin flex min-h-12 items-center justify-center gap-xs border-2 border-primary px-md py-sm font-label-bold text-label-bold uppercase text-primary transition-all hover:bg-primary hover:text-white active:scale-[0.98] lg:mx-0"
+              className="mx-margin flex min-h-12 items-center justify-center gap-xs border-2 border-primary bg-primary px-md py-sm font-label-bold text-label-bold uppercase text-white transition-all hover:bg-white hover:text-black active:scale-[0.98] lg:mx-0"
             >
               Ver produtos
               <span className="material-symbols-outlined text-base">arrow_forward</span>
