@@ -167,25 +167,24 @@ export default function Products() {
           <div className="absolute inset-0 bg-gradient-to-r from-surface via-surface/90 to-surface/45"></div>
           <div className="absolute inset-0 technical-grid-soft opacity-80"></div>
         </div>
-        <div className="relative z-10 grid w-full max-w-7xl mx-auto grid-cols-1 gap-lg lg:grid-cols-12 lg:items-end">
+        <div className="relative z-10 mx-auto grid w-full max-w-[calc(100vw-32px)] grid-cols-1 gap-lg md:max-w-7xl lg:grid-cols-12 lg:items-end">
           <div className="lg:col-span-7">
-            <span className="font-label-bold text-primary tracking-widest uppercase mb-sm block">Catálogo sob consulta</span>
-            <h1 className="font-headline-xl text-4xl text-secondary mb-md uppercase md:text-headline-xl">
+            <span className="font-label-bold text-primary tracking-widest uppercase mb-sm block">Catálogo</span>
+            <h1 className="mb-md max-w-[12ch] break-words font-headline-xl text-[clamp(30px,8.4vw,36px)] uppercase text-secondary [overflow-wrap:anywhere] md:max-w-5xl md:text-headline-xl">
               Solicite uma peça sob medida.
             </h1>
-            <p className="font-body-lg text-body-lg text-tertiary max-w-2xl uppercase tracking-wider">
-              Escolha a categoria mais próxima da sua demanda ou solicite uma peça única que não está listada e fale com a Freplan pelo WhatsApp. Medidas, material, aplicação e detalhes técnicos são alinhados no atendimento.
-            </p>
+            <p className="max-w-[32ch] break-words font-body-lg text-base leading-relaxed uppercase tracking-wider text-tertiary [overflow-wrap:anywhere] sm:text-body-lg md:max-w-2xl">
+              Escolha uma categoria ou solicite uma peça única pelo WhatsApp. Os detalhes técnicos são alinhados no atendimento.            </p>
           </div>
-          <div className="lg:col-span-5 border-l-4 border-primary bg-surface/80 p-md backdrop-blur-sm shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]">
+          <div className="w-full min-w-0 overflow-hidden border-l-4 border-primary bg-surface/80 p-md shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] backdrop-blur-sm lg:col-span-5">
             <span className="font-label-bold text-label-bold text-primary uppercase mb-sm block">Como funciona</span>
             <div className="space-y-sm">
               {processSteps.map(([number, title, text]) => (
-                <div key={number} className="grid grid-cols-[44px_1fr] gap-sm border-b border-outline-variant pb-sm last:border-b-0 last:pb-0">
+                <div key={number} className="grid grid-cols-[32px_minmax(0,1fr)] gap-sm border-b border-outline-variant pb-sm last:border-b-0 last:pb-0 sm:grid-cols-[44px_minmax(0,1fr)]">
                   <span className="font-headline-md text-primary">{number}</span>
-                  <div>
+                  <div className="min-w-0">
                     <h2 className="font-label-bold text-label-bold text-secondary uppercase">{title}</h2>
-                    <p className="font-body-md text-sm text-light-gray">{text}</p>
+                    <p className="max-w-[30ch] break-words font-body-md text-sm text-light-gray [overflow-wrap:anywhere] sm:max-w-full">{text}</p>
                   </div>
                 </div>
               ))}
@@ -306,6 +305,43 @@ export default function Products() {
               </div>
             </article>
           ))}
+        </div>
+      </section>
+
+      <section id="instagram" className="scroll-mt-[88px] border-y border-outline-variant bg-surface-container-lowest px-margin py-lg">
+        <div className="mx-auto grid max-w-7xl grid-cols-1 gap-md border-l-4 border-primary bg-surface-container-low p-md md:grid-cols-[64px_1fr_auto] md:items-center">
+          <a
+            aria-label="Instagram da Freplan"
+            className="flex h-14 w-14 items-center justify-center border border-primary text-primary transition-all hover:bg-primary hover:text-white active:scale-[0.98]"
+            href="https://www.instagram.com/freplanusinagem/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <svg aria-hidden="true" className="h-8 w-8" viewBox="0 0 24 24" fill="none">
+              <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" strokeWidth="1.8" />
+              <circle cx="12" cy="12" r="4.1" stroke="currentColor" strokeWidth="1.8" />
+              <circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" />
+            </svg>
+          </a>
+
+          <div>
+            <span className="mb-xs block font-label-bold text-label-bold uppercase tracking-widest text-primary">
+              Mais peças no Instagram
+            </span>
+            <p className="max-w-3xl font-body-md text-body-md text-light-gray">
+              Postamos semanalmente peças, soluções sob medida e trabalhos em andamento. Acompanhe por lá para ver mais aplicações reais da Freplan.
+            </p>
+          </div>
+
+          <a
+            className="inline-flex min-h-12 items-center justify-center gap-xs border-2 border-primary px-md py-sm font-label-bold text-label-bold uppercase text-primary transition-all hover:bg-primary hover:text-white active:scale-[0.98]"
+            href="https://www.instagram.com/freplanusinagem/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Acompanhar
+            <span className="material-symbols-outlined text-base">arrow_forward</span>
+          </a>
         </div>
       </section>
 

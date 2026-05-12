@@ -88,6 +88,21 @@
     background-size: 44px 44px, 44px 44px, 220px 220px;
   }
 
+  .contact-hero-grid {
+    background-image:
+      linear-gradient(rgba(201, 201, 201, 0.16) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(201, 201, 201, 0.16) 1px, transparent 1px),
+      linear-gradient(135deg, transparent 0, transparent 46%, rgba(255, 54, 0, 0.16) 47%, transparent 48%, transparent 100%);
+    background-position: center top;
+    background-size: 34px 34px, 34px 34px, 170px 170px;
+  }
+
+  @media (min-width: 768px) {
+    .contact-hero-grid {
+      background-size: 42px 42px, 42px 42px, 220px 220px;
+    }
+  }
+
   .machined-lines-soft {
     background-image:
       repeating-linear-gradient(

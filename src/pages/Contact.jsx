@@ -31,32 +31,34 @@ export default function Contact() {
 
   return (
     <>
-      <header className="relative overflow-hidden border-b-2 border-surface-variant bg-surface-container-lowest px-margin py-xl">
-        <div className="absolute inset-y-0 right-0 hidden w-1/2 industrial-grid opacity-40 md:block"></div>
+      <header className="relative overflow-hidden border-b-2 border-surface-variant bg-surface-container-low px-margin py-xl md:bg-surface-container-lowest">
+        <div className="absolute inset-0 contact-hero-grid opacity-100"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_84%_18%,rgba(255,54,0,0.24),transparent_30%),linear-gradient(145deg,rgba(18,20,20,0.38),rgba(18,20,20,0.68)_62%,rgba(13,14,15,0.86))]"></div>
+        <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-surface-container-lowest/95 to-transparent"></div>
         <img
           aria-hidden="true"
-          className="absolute right-6 top-8 hidden w-[min(26vw,300px)] object-contain opacity-[0.08] lg:block"
+          className="absolute -right-14 top-6 w-48 object-contain opacity-[0.06] sm:right-4 sm:w-56 lg:right-6 lg:top-8 lg:w-[min(26vw,300px)] lg:opacity-[0.08]"
           src={`${assetBase}img/brand/freplan-simbolo.png`}
           alt=""
         />
-        <div className="relative mx-auto grid max-w-7xl grid-cols-1 gap-xl lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:items-end">
+        <div className="relative mx-auto grid w-full max-w-[calc(100vw-32px)] grid-cols-1 gap-xl md:max-w-7xl lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:items-end">
           <div className="min-w-0">
             <div className="hazard-stripes-primary mb-md h-1.5 w-24"></div>
             <p className="mb-sm font-label-bold text-label-bold uppercase tracking-widest text-primary">
               Contato
             </p>
-            <h1 className="font-headline-xl text-4xl text-secondary uppercase mb-md max-w-5xl md:text-headline-xl">
-              Fale com a Freplan para orçar sua solução industrial.
+            <h1 className="mb-md max-w-5xl break-words font-headline-xl text-[clamp(30px,8.4vw,36px)] uppercase text-secondary [overflow-wrap:anywhere] md:text-headline-xl">
+              Fale com a Freplan para encontrar a melhor solução.
             </h1>
           </div>
 
-          <div className="min-w-0 border-l-4 border-primary bg-surface/70 p-md">
-            <p className="font-body-lg text-body-lg text-on-surface-variant">
+          <div className="w-full min-w-0 max-w-[calc(100vw-32px)] overflow-hidden border-l-4 border-primary bg-surface/70 p-md md:max-w-full">
+            <p className="max-w-[32ch] break-words font-body-lg text-base leading-relaxed text-on-surface-variant [overflow-wrap:anywhere] sm:max-w-full sm:text-body-lg">
               Atendimento para usinagem, tornearia, fabricação sob medida e manutenção industrial, com envio para todo o Brasil.
             </p>
-            <div className="mt-lg grid grid-cols-1 gap-sm sm:grid-cols-2">
+            <div className="mt-lg grid w-full max-w-[32ch] grid-cols-1 gap-sm sm:max-w-full sm:grid-cols-2">
               <a
-                className="inline-flex min-h-12 items-center justify-center bg-primary px-md py-sm font-label-bold text-label-bold uppercase text-white transition-all hover:bg-white hover:text-primary active:scale-[0.98]"
+                className="inline-flex min-h-12 w-full items-center justify-center bg-primary px-md py-sm text-center font-label-bold text-label-bold uppercase text-white transition-all hover:bg-white hover:text-primary active:scale-[0.98]"
                 href="https://wa.me/5514998701514"
                 target="_blank"
                 rel="noreferrer"
@@ -64,7 +66,7 @@ export default function Contact() {
                 Chamar no WhatsApp
               </a>
               <a
-                className="inline-flex min-h-12 items-center justify-center border-2 border-primary px-md py-sm font-label-bold text-label-bold uppercase text-primary transition-all hover:bg-primary hover:text-white active:scale-[0.98]"
+                className="inline-flex min-h-12 w-full items-center justify-center border-2 border-primary px-md py-sm text-center font-label-bold text-label-bold uppercase text-primary transition-all hover:bg-primary hover:text-white active:scale-[0.98]"
                 href="mailto:freplanusinagem@hotmail.com"
               >
                 Enviar e-mail
