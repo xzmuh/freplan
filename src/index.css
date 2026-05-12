@@ -44,13 +44,28 @@
     transition-duration: 220ms;
   }
 
-  .category-marquee {
-    animation: category-marquee 34s linear infinite;
-    will-change: transform;
+  .category-scroller {
+    cursor: grab;
+    overscroll-behavior-x: contain;
+    scrollbar-width: none;
+    touch-action: pan-y;
+    user-select: none;
   }
 
-  .category-marquee:hover {
-    animation-play-state: paused;
+  .category-scroller::-webkit-scrollbar {
+    display: none;
+  }
+
+  .category-scroller.is-dragging {
+    cursor: grabbing;
+  }
+
+  .category-scroller.is-dragging a {
+    pointer-events: none;
+  }
+
+  .category-marquee {
+    will-change: scroll-position;
   }
 }
 
@@ -127,23 +142,13 @@
   }
 }
 
-@keyframes category-marquee {
-  from {
-    transform: translate3d(0, 0, 0);
-  }
-  to {
-    transform: translate3d(calc(-50% - 6px), 0, 0);
-  }
-}
-
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
   }
 
   .page-enter,
-  .reveal-section,
-  .category-marquee {
+  .reveal-section {
     animation: none;
     opacity: 1;
     transform: none;

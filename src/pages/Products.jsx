@@ -14,7 +14,7 @@ function buildStockWhatsAppLink(productName) {
 
 export default function Products() {
   const assetBase = import.meta.env.BASE_URL;
-  const productsHeroImage = `${assetBase}img/products-hero-image.png`;
+  const productsHeroImage = `${assetBase}img/optimized/products-hero-image.jpg`;
   const scrollToStock = () => {
     document.getElementById('pronta-entrega')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
@@ -23,7 +23,7 @@ export default function Products() {
       title: 'Engrenagens',
       shortTitle: 'Engrenagens',
       text: 'Engrenagens helicoidais e retas usinadas sob medida para reposição, manutenção e aplicações industriais específicas.',
-      image: `${assetBase}img/produtos-engrenagem.jpeg`,
+      image: `${assetBase}img/optimized/produtos-engrenagem.jpg`,
       alt: 'Engrenagem industrial usinada pela Freplan',
       tags: ['Sob medida', 'Reposição', 'Usinagem'],
       details: ['Dimensões sob projeto', 'Material conforme aplicação', 'Peça fabricada pela Freplan'],
@@ -33,7 +33,7 @@ export default function Products() {
       title: 'Eixos',
       shortTitle: 'Eixos',
       text: 'Eixos, roscas e componentes torneados com acabamento técnico para conjuntos mecânicos e máquinas industriais.',
-      image: `${assetBase}img/produtos-eixos.png`,
+      image: `${assetBase}img/optimized/produtos-eixos.jpg`,
       alt: 'Eixos metálicos torneados',
       tags: ['Tornearia', 'Roscas', 'Manutenção'],
       details: ['Torneamento técnico', 'Acabamento dimensional', 'Conversão por amostra ou desenho'],
@@ -43,7 +43,7 @@ export default function Products() {
       title: 'Moldes e componentes especiais',
       shortTitle: 'Moldes',
       text: 'Peças técnicas fabricadas conforme desenho, amostra ou necessidade de adaptação do equipamento.',
-      image: `${assetBase}img/produtos-moldes.png`,
+      image: `${assetBase}img/optimized/produtos-moldes.jpg`,
       alt: 'Componente metálico especial usinado',
       tags: ['Projeto especial', 'Amostra', 'Adaptação'],
       details: ['Desenvolvimento sob demanda', 'Ajuste para aplicação real', 'Fabricação unitária ou por lote'],
@@ -53,7 +53,7 @@ export default function Products() {
       title: 'Peças em inox',
       shortTitle: 'Inox',
       text: 'Soluções em inox para aplicações que pedem resistência, durabilidade e acabamento limpo.',
-      image: `${assetBase}img/produtos-componentes-inox.jpeg`,
+      image: `${assetBase}img/optimized/produtos-componentes-inox.jpg`,
       alt: 'Peças circulares em inox com acabamento usinado',
       tags: ['Inox', 'Acabamento', 'Durabilidade'],
       details: ['Peças resistentes à corrosão', 'Acabamento técnico', 'Aplicações industriais e sanitárias'],
@@ -63,7 +63,7 @@ export default function Products() {
       title: 'Helicóide',
       shortTitle: 'Helicóide',
       text: 'Helicóides em aço inox para transporte contínuo de materiais, com alta resistência, durabilidade e acabamento sob medida.',
-      image: `${assetBase}img/produtos-helicoide.jpeg`,
+      image: `${assetBase}img/optimized/produtos-helicoide.jpg`,
       alt: 'Helicóide em aço inox com acabamento usinado para transporte de materiais',
       tags: ['Transporte', 'Inox', 'Sob medida'],
       details: ['Passo conforme aplicação', 'Diâmetro sob consulta', 'Produção para sistemas industriais'],
@@ -73,7 +73,7 @@ export default function Products() {
       title: 'Envase',
       shortTitle: 'Envase',
       text: 'Peças, bicos, conexões e componentes usinados para manutenção, reposição e adaptação de sistemas de envase industrial.',
-      image: `${assetBase}img/produtos-envase.jpeg`,
+      image: `${assetBase}img/optimized/produtos-envase.jpg`,
       alt: 'Componentes usinados para sistema de envase industrial',
       tags: ['Envase', 'Reposição', 'Adaptação'],
       details: ['Componentes para linha industrial', 'Peças por desenho ou amostra', 'Ajustes para manutenção'],
@@ -83,7 +83,7 @@ export default function Products() {
       title: 'Roldanas de tração',
       shortTitle: 'Roldanas',
       text: 'Roldanas revestidas e usinadas para tração, movimentação e reposição em conjuntos mecânicos industriais.',
-      image: `${assetBase}img/produtos-roldanas-tracao.jpeg`,
+      image: `${assetBase}img/optimized/produtos-roldanas-tracao.jpg`,
       alt: 'Roldanas de tração vermelhas com cubo metálico usinado',
       tags: ['Tração', 'Revestimento', 'Reposição'],
       details: ['Medidas conforme equipamento', 'Cubo metálico usinado', 'Revestimento conforme aplicação'],
@@ -93,7 +93,7 @@ export default function Products() {
       title: 'Rosqueadeiras',
       shortTitle: 'Rosqueadeiras',
       text: 'Conjuntos e componentes para rosqueamento, fabricados sob medida para aplicações técnicas e manutenção industrial.',
-      image: `${assetBase}img/produtos-rosqueadeiras2.jpeg`,
+      image: `${assetBase}img/optimized/produtos-rosqueadeiras2.jpg`,
       alt: 'Componentes metálicos para rosqueadeiras com anel amarelo',
       imagePosition: 'center bottom',
       tags: ['Roscas', 'Conjunto', 'Sob medida'],
@@ -110,7 +110,7 @@ export default function Products() {
     {
       title: 'Rodas de tração',
       text: 'Item de estoque para reposição com medida padrão única.',
-      image: `${assetBase}img/estoque-roda-tracao.jpeg`,
+      image: `${assetBase}img/optimized/estoque-roda-tracao.jpg`,
       alt: 'Roda de tração vermelha com cubo metálico',
       imagePosition: 'center center',
       specs: ['Medida padrão única'],
@@ -119,7 +119,7 @@ export default function Products() {
     {
       title: 'Roldanas de rosqueadeira automática',
       text: 'Roldanas para aplicação em rosqueadeira automática.',
-      image: `${assetBase}img/estoque-roldana-rosqueadeira-automatica.jpeg`,
+      image: `${assetBase}img/optimized/estoque-roldana-rosqueadeira-automatica.jpg`,
       alt: 'Roldanas vermelhas para rosqueadeira automática',
       imagePosition: 'center center',
       specs: ['Medida padrão única'],
@@ -128,7 +128,7 @@ export default function Products() {
     {
       title: 'Ponteiras para rosqueadeira manual',
       text: 'Três tamanhos para atender diferentes faixas de trabalho.',
-      image: `${assetBase}img/estoque-ponteiras-rosqueadeira-manual.jpeg`,
+      image: `${assetBase}img/optimized/estoque-ponteiras-rosqueadeira-manual.jpg`,
       alt: 'Ponteiras metálicas para rosqueadeira manual em três tamanhos',
       imagePosition: 'center center',
       specs: ['20mm a 60mm', '60mm a 100mm', '100mm a 140mm'],
@@ -137,7 +137,7 @@ export default function Products() {
     {
       title: 'União TC',
       text: 'Peça de estoque com variação por faixa de medida.',
-      image: `${assetBase}img/estoque-uniao-tc.jpeg`,
+      image: `${assetBase}img/optimized/estoque-uniao-tc.jpg`,
       alt: 'União TC em inox com acabamento usinado',
       imagePosition: 'center center',
       specs: ['Variações por faixa de medida'],
@@ -146,7 +146,7 @@ export default function Products() {
     {
       title: 'Bicos de envase',
       text: 'Bicos com rosca padrão e variação no diâmetro ou comprimento.',
-      image: `${assetBase}img/bicos2.jpeg`,
+      image: `${assetBase}img/optimized/bicos2.jpg`,
       alt: 'Bicos de envase metálicos em tamanhos diferentes',
       imagePosition: 'center center',
       mobileImagePosition: 'center 42%',
@@ -163,6 +163,8 @@ export default function Products() {
             alt="Estrutura industrial"
             className="w-full h-full object-cover opacity-28 grayscale"
             src={productsHeroImage}
+            fetchPriority="high"
+            decoding="async"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-surface via-surface/90 to-surface/45"></div>
           <div className="absolute inset-0 technical-grid-soft opacity-80"></div>
@@ -228,11 +230,11 @@ export default function Products() {
       </section>
 
       <section id="catalogo-produtos" className="px-margin py-xl md:px-0 max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 gap-md md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <div className="grid grid-cols-1 gap-md md:grid-cols-2 py-sm lg:grid-cols-3 xl:grid-cols-4">
           <div className="md:col-span-7">
             <span className="font-label-bold text-primary tracking-widest uppercase mb-sm block">Produtos fabricados pela Freplan</span>
             <h2 className="font-headline-lg text-4xl text-secondary uppercase md:text-headline-lg">
-              Catálogo consultivo para orçamento sob medida
+              Catálogo de peças sob medida
             </h2>
           </div>
           <p className="font-body-md text-body-md text-light-gray md:col-span-5">
@@ -258,6 +260,8 @@ export default function Products() {
                   alt={product.alt}
                   className="h-full w-full object-cover grayscale transition duration-500 group-hover:grayscale-0 group-hover:scale-[1.03]"
                   src={product.image}
+                  loading="lazy"
+                  decoding="async"
                   style={product.imagePosition ? { objectPosition: product.imagePosition } : undefined}
                 />
                 <div className="absolute left-0 top-0 h-3 w-full bg-primary-container"></div>
@@ -376,6 +380,8 @@ export default function Products() {
                     alt={item.alt}
                     className="absolute inset-0 h-full w-full object-cover object-[var(--stock-mobile-position)] transition duration-500 group-hover:scale-[1.03] sm:object-[var(--stock-image-position)]"
                     src={item.image}
+                    loading="lazy"
+                    decoding="async"
                     style={{
                       '--stock-mobile-position': item.mobileImagePosition || item.imagePosition || 'center center',
                       '--stock-image-position': item.imagePosition || 'center center',

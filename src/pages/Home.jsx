@@ -1,64 +1,181 @@
-﻿export default function Home() {
+import { useEffect, useRef } from 'react';
+
+export default function Home() {
+  const categoryScrollerRef = useRef(null);
+  const categoryAutoScrollRef = useRef(0);
+  const categoryDragRef = useRef({
+    isDragging: false,
+    moved: false,
+    pauseUntil: 0,
+    scrollLeft: 0,
+    startX: 0,
+  });
   const assetBase = import.meta.env.BASE_URL;
   const categoryRail = [
     {
       title: 'Engrenagens',
       text: 'Rodas dentadas e reposição sob medida',
-      image: `${assetBase}img/produtos-engrenagem.jpeg`,
+      image: `${assetBase}img/optimized/produtos-engrenagem.jpg`,
       icon: 'settings',
     },
     {
       title: 'Eixos',
       text: 'Peças torneadas para máquinas e conjuntos',
-      image: `${assetBase}img/produtos-eixos.png`,
+      image: `${assetBase}img/optimized/produtos-eixos.jpg`,
       icon: 'straighten',
     },
     {
       title: 'Moldes',
       text: 'Componentes especiais por amostra ou desenho',
-      image: `${assetBase}img/produtos-moldes.png`,
+      image: `${assetBase}img/optimized/produtos-moldes.jpg`,
       icon: 'architecture',
     },
     {
       title: 'Peças em inox',
       text: 'Soluções resistentes para uso industrial',
-      image: `${assetBase}img/produtos-componentes-inox.jpeg`,
+      image: `${assetBase}img/optimized/produtos-componentes-inox.jpg`,
       icon: 'verified',
     },
     {
       title: 'Helicóide',
       text: 'Transporte contínuo de materiais',
-      image: `${assetBase}img/produtos-helicoide.jpeg`,
+      image: `${assetBase}img/optimized/produtos-helicoide.jpg`,
       icon: 'sync_alt',
     },
     {
       title: 'Envase',
       text: 'Bicos, conexões e peças de reposição',
-      image: `${assetBase}img/produtos-envase.jpeg`,
+      image: `${assetBase}img/optimized/produtos-envase.jpg`,
       icon: 'precision_manufacturing',
     },
     {
       title: 'Roldanas de tração',
       text: 'Roldanas revestidas e cubos usinados',
-      image: `${assetBase}img/produtos-roldanas-tracao.jpeg`,
+      image: `${assetBase}img/optimized/produtos-roldanas-tracao.jpg`,
       icon: 'motion_photos_auto',
     },
     {
       title: 'Rosqueadeiras',
       text: 'Componentes para rosqueamento técnico',
-      image: `${assetBase}img/produtos-rosqueadeiras2.jpeg`,
+      image: `${assetBase}img/optimized/produtos-rosqueadeiras2.jpg`,
       imagePosition: 'center bottom',
       icon: 'build_circle',
     },
   ];
   const categoryRailLoop = [...categoryRail, ...categoryRail];
 
+  useEffect(() => {
+    const scroller = categoryScrollerRef.current;
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (!scroller || prefersReducedMotion) return undefined;
+
+    let animationFrame = 0;
+    let lastTime = performance.now();
+    categoryAutoScrollRef.current = scroller.scrollLeft;
+
+    const tick = (time) => {
+      const drag = categoryDragRef.current;
+      const delta = time - lastTime;
+      const loopPoint = scroller.scrollWidth / 2;
+
+      if (!drag.isDragging && time > drag.pauseUntil && loopPoint > 0) {
+        categoryAutoScrollRef.current += delta * 0.06;
+
+        if (categoryAutoScrollRef.current >= loopPoint) {
+          categoryAutoScrollRef.current -= loopPoint;
+        }
+
+        scroller.scrollLeft = categoryAutoScrollRef.current;
+      }
+
+      lastTime = time;
+      animationFrame = requestAnimationFrame(tick);
+    };
+
+    animationFrame = requestAnimationFrame(tick);
+
+    return () => cancelAnimationFrame(animationFrame);
+  }, []);
+
+  const handleCategoryPointerDown = (event) => {
+    if (event.button !== undefined && event.button !== 0) return;
+
+    const scroller = categoryScrollerRef.current;
+    if (!scroller) return;
+
+    categoryDragRef.current = {
+      isDragging: true,
+      moved: false,
+      pauseUntil: Number.POSITIVE_INFINITY,
+      scrollLeft: scroller.scrollLeft,
+      startX: event.clientX,
+    };
+
+    scroller.classList.add('is-dragging');
+    scroller.setPointerCapture?.(event.pointerId);
+  };
+
+  const handleCategoryPointerMove = (event) => {
+    const scroller = categoryScrollerRef.current;
+    const drag = categoryDragRef.current;
+
+    if (!scroller || !drag.isDragging) return;
+
+    const distance = event.clientX - drag.startX;
+
+    if (Math.abs(distance) > 4) {
+      drag.moved = true;
+    }
+
+    const loopPoint = scroller.scrollWidth / 2;
+    scroller.scrollLeft = drag.scrollLeft - distance;
+    categoryAutoScrollRef.current = scroller.scrollLeft;
+
+    if (loopPoint > 0) {
+      if (scroller.scrollLeft >= loopPoint) {
+        scroller.scrollLeft -= loopPoint;
+        drag.scrollLeft -= loopPoint;
+        categoryAutoScrollRef.current = scroller.scrollLeft;
+      } else if (scroller.scrollLeft <= 0) {
+        scroller.scrollLeft += loopPoint;
+        drag.scrollLeft += loopPoint;
+        categoryAutoScrollRef.current = scroller.scrollLeft;
+      }
+    }
+  };
+
+  const handleCategoryPointerUp = (event) => {
+    const scroller = categoryScrollerRef.current;
+    const drag = categoryDragRef.current;
+
+    if (!scroller || !drag.isDragging) return;
+
+    drag.isDragging = false;
+    drag.pauseUntil = performance.now() + 700;
+    scroller.classList.remove('is-dragging');
+    scroller.releasePointerCapture?.(event.pointerId);
+  };
+
+  const handleCategoryClick = (event) => {
+    if (categoryDragRef.current.moved) {
+      event.preventDefault();
+      categoryDragRef.current.moved = false;
+    }
+  };
+
   return (
     <>
       <section className="relative min-h-[calc(100dvh-72px)] md:min-h-[calc(100dvh-88px)] flex items-center overflow-hidden py-[clamp(40px,8dvh,88px)]">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 technical-grid-soft opacity-60"></div>
-          <img alt="Estrutura industrial" className="absolute inset-0 h-full w-full object-cover object-center opacity-32 grayscale" src={`${assetBase}img/hero.png`} />
+          <img
+            alt="Estrutura industrial"
+            className="absolute inset-0 h-full w-full object-cover object-center opacity-32 grayscale"
+            src={`${assetBase}img/optimized/hero.jpg`}
+            fetchPriority="high"
+            decoding="async"
+          />
           <div className="absolute inset-0 bg-gradient-to-r from-surface/94 via-surface/72 to-surface/34"></div>
           <div className="absolute inset-0 bg-gradient-to-b from-surface/22 via-transparent to-surface/58"></div>
           <img
@@ -66,6 +183,8 @@
             className="absolute left-[max(32px,8vw)] top-1/2 hidden w-[min(30vw,360px)] -translate-y-1/2 object-contain opacity-[0.09] lg:block"
             src={`${assetBase}img/brand/freplan-simbolo.png`}
             alt=""
+            loading="lazy"
+            decoding="async"
           />
         </div>
         <div className="relative z-10 px-margin w-full max-w-7xl mx-auto">
@@ -97,7 +216,15 @@
               <h2 className="font-headline-md text-2xl uppercase text-secondary">Categorias para identificar sua demanda</h2>
             </div>
 
-            <div className="relative -mx-margin overflow-hidden lg:mx-0">
+            <div
+              ref={categoryScrollerRef}
+              className="category-scroller relative -mx-margin overflow-x-auto lg:mx-0"
+              onPointerDown={handleCategoryPointerDown}
+              onPointerMove={handleCategoryPointerMove}
+              onPointerUp={handleCategoryPointerUp}
+              onPointerCancel={handleCategoryPointerUp}
+              onPointerLeave={handleCategoryPointerUp}
+            >
               <div className="pointer-events-none absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-surface-container-lowest to-transparent z-10"></div>
               <div className="pointer-events-none absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-surface-container-lowest to-transparent z-10"></div>
               <div className="category-marquee flex w-max gap-sm px-margin lg:px-0">
@@ -107,11 +234,14 @@
                     href={`${assetBase}#/products`}
                     className="group grid w-[250px] shrink-0 grid-cols-[82px_1fr] overflow-hidden border border-outline-variant bg-surface-container transition-all hover:border-primary active:scale-[0.98]"
                     aria-label={`Ver produtos de ${category.title}`}
+                    onClick={handleCategoryClick}
                   >
                     <div className="relative h-full min-h-[92px] bg-surface-container-high">
                       <img
                         alt={category.title}
                         src={category.image}
+                        loading="lazy"
+                        decoding="async"
                         className="h-full w-full object-cover  transition duration-500  group-hover:scale-[1.04]"
                         style={category.imagePosition ? { objectPosition: category.imagePosition } : undefined}
                       />
@@ -162,7 +292,13 @@
           </div>
           <div className="relative">
             <div className="aspect-[4/3] bg-surface-container relative overflow-hidden">
-              <img alt="Lote de peças industriais fabricadas pela Freplan" className="w-full h-full object-cover grayscale" src={`${assetBase}img/home-lote-pecas.jpeg`} />
+              <img
+                alt="Lote de peças industriais fabricadas pela Freplan"
+                className="w-full h-full object-cover grayscale"
+                src={`${assetBase}img/optimized/home-lote-pecas.jpg`}
+                loading="lazy"
+                decoding="async"
+              />
               <div className="absolute inset-0 border-[14px] border-surface/50 pointer-events-none"></div>
             </div>
             <div className="absolute -bottom-8 -right-8 bg-primary p-md hidden md:block">

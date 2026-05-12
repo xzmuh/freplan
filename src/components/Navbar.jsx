@@ -29,6 +29,8 @@ export default function Navbar() {
             className="h-9 w-auto max-w-[160px] object-contain md:h-11 md:max-w-[210px]"
             src={`${assetBase}img/brand/freplan-logomarca.png`}
             alt="Freplan"
+            fetchPriority="high"
+            decoding="async"
           />
         </Link>
 

@@ -45,6 +45,8 @@ export default function Footer() {
         className="absolute bottom-[-38px] left-[-24px] w-[92vw] opacity-[0.035] grayscale sm:bottom-[-90px] sm:left-[-42px] sm:w-[min(72vw,760px)] sm:opacity-[0.075]"
         src={`${assetBase}img/brand/freplan-logotipo.png`}
         alt=""
+        loading="lazy"
+        decoding="async"
       />
       {/* <img
         aria-hidden="true"
@@ -63,6 +65,8 @@ export default function Footer() {
                 className="h-16 w-auto max-w-[220px] object-contain md:h-20"
                 src={`${assetBase}img/brand/freplan-logotipo.png`}
                 alt="Freplan"
+                loading="lazy"
+                decoding="async"
               />
             </Link>
 

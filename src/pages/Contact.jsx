@@ -40,6 +40,8 @@ export default function Contact() {
           className="absolute -right-14 top-6 w-48 object-contain opacity-[0.06] sm:right-4 sm:w-56 lg:right-6 lg:top-8 lg:w-[min(26vw,300px)] lg:opacity-[0.08]"
           src={`${assetBase}img/brand/freplan-simbolo.png`}
           alt=""
+          loading="lazy"
+          decoding="async"
         />
         <div className="relative mx-auto grid w-full max-w-[calc(100vw-32px)] grid-cols-1 gap-xl md:max-w-7xl lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:items-end">
           <div className="min-w-0">
