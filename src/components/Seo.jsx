@@ -75,7 +75,8 @@ export default function Seo() {
     const basePath = import.meta.env.BASE_URL.replace(/\/$/, '');
     const routePath = location.pathname === '/' ? '' : location.pathname;
     const pageUrl = `${origin}${basePath}/#${routePath || '/'}`;
-    const imageUrl = `${origin}${basePath}/img/brand/freplan-logomarca.png`;
+    const imageUrl = `${origin}${basePath}/og-image.png`;
+    const logoUrl = `${origin}${basePath}/img/brand/freplan-logomarca.png`;
 
     document.title = seo.title || baseTitle;
 
@@ -103,6 +104,26 @@ export default function Seo() {
       property: 'og:image',
       content: imageUrl,
     });
+    upsertMeta('meta[property="og:image:secure_url"]', {
+      property: 'og:image:secure_url',
+      content: imageUrl,
+    });
+    upsertMeta('meta[property="og:image:type"]', {
+      property: 'og:image:type',
+      content: 'image/png',
+    });
+    upsertMeta('meta[property="og:image:width"]', {
+      property: 'og:image:width',
+      content: '1200',
+    });
+    upsertMeta('meta[property="og:image:height"]', {
+      property: 'og:image:height',
+      content: '630',
+    });
+    upsertMeta('meta[property="og:image:alt"]', {
+      property: 'og:image:alt',
+      content: siteName,
+    });
     upsertMeta('meta[name="twitter:title"]', {
       name: 'twitter:title',
       content: seo.title,
@@ -114,6 +135,10 @@ export default function Seo() {
     upsertMeta('meta[name="twitter:image"]', {
       name: 'twitter:image',
       content: imageUrl,
+    });
+    upsertMeta('meta[name="twitter:image:alt"]', {
+      name: 'twitter:image:alt',
+      content: siteName,
     });
     upsertLink('link[rel="canonical"]', {
       rel: 'canonical',
@@ -133,7 +158,7 @@ export default function Seo() {
         name: siteName,
         logo: {
           '@type': 'ImageObject',
-          url: imageUrl,
+          url: logoUrl,
         },
       },
     });
