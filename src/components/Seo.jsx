@@ -75,7 +75,7 @@ export default function Seo() {
     const basePath = import.meta.env.BASE_URL.replace(/\/$/, '');
     const routePath = location.pathname === '/' ? '' : location.pathname;
     const pageUrl = `${origin}${basePath}/#${routePath || '/'}`;
-    const imageUrl = `${origin}${basePath}/og-image.png`;
+    const imageUrl = `${origin}${basePath}/img/card-social.jpg`;
     const logoUrl = `${origin}${basePath}/img/brand/freplan-logomarca.png`;
 
     document.title = seo.title || baseTitle;
@@ -110,7 +110,7 @@ export default function Seo() {
     });
     upsertMeta('meta[property="og:image:type"]', {
       property: 'og:image:type',
-      content: 'image/png',
+      content: 'image/jpeg',
     });
     upsertMeta('meta[property="og:image:width"]', {
       property: 'og:image:width',
@@ -118,7 +118,7 @@ export default function Seo() {
     });
     upsertMeta('meta[property="og:image:height"]', {
       property: 'og:image:height',
-      content: '630',
+      content: '720',
     });
     upsertMeta('meta[property="og:image:alt"]', {
       property: 'og:image:alt',
