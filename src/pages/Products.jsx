@@ -174,7 +174,7 @@ export default function Products() {
               Solicite uma peça sob medida.
             </h1>
             <p className="max-w-[32ch] break-words font-body-lg text-base leading-relaxed uppercase tracking-wider text-tertiary [overflow-wrap:anywhere] sm:text-body-lg md:max-w-2xl">
-              Escolha uma categoria ou solicite uma peça única pelo WhatsApp. Os detalhes técnicos são alinhados no atendimento.            </p>
+              Escolha uma categoria ou solicite uma peça específica pelo WhatsApp. Os detalhes técnicos são alinhados no atendimento.            </p>
           </div>
           <div className="w-full min-w-0 overflow-hidden border-l-4 border-primary bg-surface/80 p-md shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] backdrop-blur-sm lg:col-span-5">
             <span className="font-label-bold text-label-bold text-primary uppercase mb-sm block">Como funciona</span>
