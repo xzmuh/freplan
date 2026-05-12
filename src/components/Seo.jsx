@@ -5,12 +5,12 @@ const baseTitle = 'Freplan';
 
 const routeSeo = {
   '/': {
-    title: 'Freplan | Peças Industriais Sob Medida para Todo o Brasil',
+    title: 'Freplan | Peças Industriais Sob Medida.',
     description:
       'Freplan: tornearia, usinagem e fabricação de peças industriais sob medida para manutenção, reposição e projetos especiais em todo o Brasil.',
   },
   '/products': {
-    title: 'Peças Industriais Sob Medida | Freplan Usinagem para Todo o Brasil',
+    title: 'Peças Industriais Sob Medida | Freplan Usinagem.',
     description:
       'Catálogo Freplan de engrenagens, eixos, roldanas, helicóides, moldes, peças em inox, bicos de envase e componentes industriais sob medida com envio nacional.',
   },
