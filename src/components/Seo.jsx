@@ -1,28 +1,29 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
-const baseTitle = 'Freplan';
+const siteName = 'Freplan';
+const baseTitle = siteName;
 
 const routeSeo = {
   '/': {
-    title: 'Freplan | Peças Industriais Sob Medida.',
+    title: 'Freplan | Usinagem de Peças Sob Medida',
     description:
-      'Freplan: tornearia, usinagem e fabricação de peças industriais sob medida para manutenção, reposição e projetos especiais em todo o Brasil.',
+      'Freplan: usinagem de peças sob medida em Agudos, região de Bauru/SP. Tornearia, fabricação de peças industriais, engrenagens, eixos, roldanas e inox.',
   },
   '/products': {
-    title: 'Peças Industriais Sob Medida | Freplan Usinagem.',
+    title: 'Freplan | Peças Industriais Sob Medida',
     description:
-      'Catálogo Freplan de engrenagens, eixos, roldanas, helicóides, moldes, peças em inox, bicos de envase e componentes industriais sob medida com envio nacional.',
+      'Catálogo Freplan de usinagem de peças sob medida: engrenagens, eixos, roldanas, helicóides, moldes, peças em inox, bicos de envase e componentes industriais.',
   },
   '/about': {
-    title: 'Sobre a Freplan | Usinagem, Tornearia e Soluções Industriais',
+    title: 'Freplan | Usinagem, Tornearia e Soluções Industriais',
     description:
-      'Conheça a Freplan, empresa que desde 2000 fabrica peças, adaptações e soluções industriais sob medida com precisão e confiabilidade.',
+      'Conheça a Freplan em Agudos/SP, empresa que desde 2000 atua com usinagem de peças sob medida, tornearia e soluções industriais para a região de Bauru/SP.',
   },
   '/contact': {
-    title: 'Contato Freplan | Orçamento de Usinagem e Peças Industriais',
+    title: 'Freplan | Orçamento de Usinagem de Peças Sob Medida',
     description:
-      'Fale com a Freplan para orçamento de usinagem, tornearia, fabricação sob medida, manutenção industrial e peças de reposição em todo o Brasil.',
+      'Fale com a Freplan para orçamento de usinagem de peças sob medida, tornearia, fabricação industrial, manutenção e peças de reposição em Agudos, Bauru/SP e todo o Brasil.',
   },
 };
 
@@ -86,6 +87,10 @@ export default function Seo() {
       property: 'og:title',
       content: seo.title,
     });
+    upsertMeta('meta[property="og:site_name"]', {
+      property: 'og:site_name',
+      content: siteName,
+    });
     upsertMeta('meta[property="og:description"]', {
       property: 'og:description',
       content: seo.description,
@@ -118,13 +123,14 @@ export default function Seo() {
     upsertJsonLd('freplan-website-schema', {
       '@context': 'https://schema.org',
       '@type': 'WebSite',
-      name: 'Freplan',
+      name: siteName,
+      alternateName: ['Freplan Usinagem', 'Freplan Soluções Industriais', 'Freplan Usinagem Agudos'],
       url: `${origin}${basePath}/`,
       inLanguage: 'pt-BR',
       description: routeSeo['/'].description,
       publisher: {
         '@type': 'Organization',
-        name: 'Freplan',
+        name: siteName,
         logo: {
           '@type': 'ImageObject',
           url: imageUrl,
