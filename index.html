@@ -3,7 +3,11 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="canonical" href="https://www.freplan.com.br/" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="index, follow, max-image-preview:large" />
   <meta name="googlebot" content="index, follow, max-image-preview:large" />
@@ -19,25 +23,41 @@
   <meta property="og:title" content="Freplan | Peças Industriais Sob Medida para Todo o Brasil" />
   <meta property="og:description"
     content="Tornearia, usinagem e fabricação de componentes industriais sob medida, com atendimento nacional para manutenção, reposição e projetos especiais." />
-  <meta property="og:image" content="/img/brand/freplan-logomarca.png" />
+  <meta property="og:url" content="https://www.freplan.com.br/" />
+  <meta property="og:image" content="https://www.freplan.com.br/img/brand/freplan-logomarca.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Freplan | Peças Industriais Sob Medida para Todo o Brasil" />
   <meta name="twitter:description"
     content="Peças industriais, engrenagens, eixos, roldanas, inox e soluções sob medida para operação industrial." />
-  <meta name="twitter:image" content="/img/brand/freplan-logomarca.png" />
+  <meta name="twitter:image" content="https://www.freplan.com.br/img/brand/freplan-logomarca.png" />
   <title>Freplan | Peças Industriais Sob Medida para Todo o Brasil</title>
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "@id": "/#empresa",
+      "@type": ["Organization", "LocalBusiness"],
+      "@id": "https://www.freplan.com.br/#empresa",
+      "url": "https://www.freplan.com.br/",
       "name": "Freplan",
       "alternateName": ["Freplan Usinagem", "Freplan Soluções Industriais"],
       "description": "Usinagem, tornearia e fabricação de peças industriais sob medida para manutenção, reposição e projetos especiais.",
-      "image": "/img/brand/freplan-logomarca.png",
-      "logo": "/img/brand/freplan-logomarca.png",
+      "image": "https://www.freplan.com.br/img/brand/freplan-logomarca.png",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.freplan.com.br/img/brand/freplan-logomarca.png",
+        "contentUrl": "https://www.freplan.com.br/img/brand/freplan-logomarca.png",
+        "width": 2104,
+        "height": 458
+      },
       "telephone": "+55 14 99870-1514",
       "email": "freplanusinagem@hotmail.com",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+55 14 99870-1514",
+        "email": "freplanusinagem@hotmail.com",
+        "contactType": "Atendimento comercial",
+        "areaServed": "BR",
+        "availableLanguage": "pt-BR"
+      },
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Av. Carlos Gomes, box 4",
@@ -59,6 +79,19 @@
         "peças em inox",
         "moldes industriais",
         "manutenção industrial"
+      ]
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SiteNavigationElement",
+      "name": ["Home", "Soluções", "Sobre nós", "Contato"],
+      "url": [
+        "https://www.freplan.com.br/",
+        "https://www.freplan.com.br/#/products",
+        "https://www.freplan.com.br/#/about",
+        "https://www.freplan.com.br/#/contact"
       ]
     }
   </script>

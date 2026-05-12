@@ -7,6 +7,7 @@ export default function Home() {
     isDragging: false,
     moved: false,
     pauseUntil: 0,
+    pointerType: '',
     scrollLeft: 0,
     startX: 0,
   });
@@ -108,6 +109,7 @@ export default function Home() {
       isDragging: true,
       moved: false,
       pauseUntil: Number.POSITIVE_INFINITY,
+      pointerType: event.pointerType,
       scrollLeft: scroller.scrollLeft,
       startX: event.clientX,
     };
@@ -125,6 +127,10 @@ export default function Home() {
 
     if (Math.abs(distance) > 4) {
       drag.moved = true;
+    }
+
+    if (drag.pointerType === 'touch') {
+      return;
     }
 
     const loopPoint = scroller.scrollWidth / 2;
@@ -154,6 +160,10 @@ export default function Home() {
     drag.pauseUntil = performance.now() + 700;
     categoryAutoScrollRef.current = scroller.scrollLeft;
     scroller.classList.remove('is-dragging');
+  };
+
+  const handleCategoryScroll = (event) => {
+    categoryAutoScrollRef.current = event.currentTarget.scrollLeft;
   };
 
   const handleCategoryClick = (event) => {
@@ -289,6 +299,7 @@ export default function Home() {
               onPointerUp={handleCategoryPointerUp}
               onPointerCancel={handleCategoryPointerUp}
               onPointerLeave={handleCategoryPointerUp}
+              onScroll={handleCategoryScroll}
             >
               <div className="pointer-events-none absolute inset-y-0 left-0 z-10 hidden w-16 bg-gradient-to-r from-surface-container-lowest to-transparent md:block"></div>
               <div className="pointer-events-none absolute inset-y-0 right-0 z-10 hidden w-16 bg-gradient-to-l from-surface-container-lowest to-transparent md:block"></div>
