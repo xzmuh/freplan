@@ -129,20 +129,20 @@ export default function Home() {
     }
 
     const loopPoint = scroller.scrollWidth / 2;
-    scroller.scrollLeft = drag.scrollLeft - distance;
-    categoryAutoScrollRef.current = scroller.scrollLeft;
+    let nextScrollLeft = drag.scrollLeft - distance;
 
     if (loopPoint > 0) {
-      if (scroller.scrollLeft >= loopPoint) {
-        scroller.scrollLeft -= loopPoint;
+      if (nextScrollLeft >= loopPoint) {
+        nextScrollLeft -= loopPoint;
         drag.scrollLeft -= loopPoint;
-        categoryAutoScrollRef.current = scroller.scrollLeft;
-      } else if (scroller.scrollLeft <= 0) {
-        scroller.scrollLeft += loopPoint;
+      } else if (nextScrollLeft < 0) {
+        nextScrollLeft += loopPoint;
         drag.scrollLeft += loopPoint;
-        categoryAutoScrollRef.current = scroller.scrollLeft;
       }
     }
+
+    scroller.scrollLeft = nextScrollLeft;
+    categoryAutoScrollRef.current = nextScrollLeft;
   };
 
   const handleCategoryPointerUp = (event) => {
